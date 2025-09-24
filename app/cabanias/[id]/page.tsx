@@ -31,7 +31,7 @@ const cabinsData = [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cabania-2-tu-cassa.jpg-gycgvoQ87J7iFIaQ4mwpNTT7Yu5Gd2.jpeg",
     renderImage: "/images/cabania-3-render.jpg",
     floorPlan: "/images/plano-cabania-2.jpg",
-    offerPrice: "$14.180.000",
+    offerPrice: "$14.880.000",
     bedrooms: "2 dormitorios",
     area: "42 m² más 15 m² de galería",
     description:
@@ -58,7 +58,7 @@ const cabinsData = [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cabania-4-tu-cassa.jpg-HPFGVSH2DDSJrH11zNUkGiTj9ohMLg.jpeg",
     renderImage: "/images/cabania-3-render.jpg",
     floorPlan: "/images/plano-cabania-4.jpg",
-    offerPrice: "$17.160.000",
+    offerPrice: "$17.860.000",
     bedrooms: "3 dormitorios",
     area: "70 m² más 25 m² de galería",
     description:
