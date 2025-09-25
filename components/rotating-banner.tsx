@@ -34,7 +34,7 @@ export function RotatingBanner() {
             {rotatingTexts[currentTextIndex]}
           </h2>
 
-          <Link href="/minimalista">
+          <Link href="/casas-minimalistas">
             <Button
               size="lg"
               className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105"
