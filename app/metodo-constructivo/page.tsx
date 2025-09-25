@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: "Método Constructivo - Tu Cassa Prefabricadas",
+  title: "Método Constructivo - Tu Cassa Prefabricadas | Calidad y Experiencia",
   description:
     "Conocé en detalle nuestro método constructivo para casas prefabricadas. Paneles portantes, aislación térmica, terminaciones de calidad y más de 17 años de experiencia en Argentina.",
   keywords: [
@@ -22,17 +22,33 @@ export const metadata: Metadata = {
     "fibrocemento",
     "durlock",
     "construcción modular",
+    "calidad construcción",
+    "experiencia construcción",
   ],
+  authors: [{ name: "Tu Cassa Prefabricadas" }],
+  creator: "Tu Cassa Prefabricadas",
+  publisher: "Tu Cassa Prefabricadas",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://www.tucassa.com.ar"),
+  alternates: {
+    canonical: "/metodo-constructivo",
+  },
   openGraph: {
-    title: "Método Constructivo - Tu Cassa Prefabricadas",
+    title: "Método Constructivo - Tu Cassa Prefabricadas | Calidad y Experiencia",
     description:
-      "Conocé en detalle nuestro método constructivo para casas prefabricadas con más de 17 años de experiencia.",
+      "Conocé en detalle nuestro método constructivo para casas prefabricadas con más de 17 años de experiencia. Paneles portantes, aislación térmica y terminaciones de calidad.",
+    url: "https://www.tucassa.com.ar/metodo-constructivo",
+    siteName: "Tu Cassa Prefabricadas",
     images: [
       {
         url: "/images/og-image-metodo-constructivo.jpg",
         width: 1200,
         height: 630,
-        alt: "Método Constructivo Tu Cassa Prefabricadas",
+        alt: "Método Constructivo Tu Cassa Prefabricadas - Calidad y experiencia",
       },
     ],
     type: "website",
@@ -40,10 +56,24 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Método Constructivo - Tu Cassa Prefabricadas",
+    title: "Método Constructivo - Tu Cassa Prefabricadas | Calidad y Experiencia",
     description:
       "Conocé en detalle nuestro método constructivo para casas prefabricadas con más de 17 años de experiencia.",
     images: ["/images/og-image-metodo-constructivo.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "google-site-verification-code",
   },
 }
 

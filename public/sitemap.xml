@@ -18,8 +18,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <!-- Updated domain to www.tucassa.com.ar -->
-    <loc>https://www.tucassa.com.ar/casas-minimalistas</loc>
+    <!-- Updated URL from casas-minimalistas to viviendas-minimalistas -->
+    <loc>https://www.tucassa.com.ar/viviendas-minimalistas</loc>
     <lastModified>2025-01-09T00:00:00+00:00</lastModified>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

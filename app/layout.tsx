@@ -1,5 +1,6 @@
 import type React from "react"
 import { Bree_Serif, Montserrat } from "next/font/google"
+import { StructuredData } from "@/components/structured-data"
 import "./globals.css"
 
 const breeSerif = Bree_Serif({
@@ -91,7 +92,7 @@ export const metadata = {
     yahoo: "yahoo-site-verification-code-here",
   },
   category: "construction",
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -109,6 +110,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <StructuredData type="organization" />
+        <StructuredData type="website" />
       </head>
       <body className="font-sans">{children}</body>
     </html>

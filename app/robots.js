@@ -5,6 +5,6 @@ export default function robots() {
       allow: "/",
       disallow: ["/admin/", "/private/"],
     },
-    sitemap: "https://tu-cassa.com/sitemap.xml",
+    sitemap: "https://www.tucassa.com.ar/sitemap.xml",
   }
 }

@@ -4,14 +4,13 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CabinsGallery } from "@/components/gallery/cabins-gallery"
+import { TraditionalHousesGallery } from "@/components/gallery/traditional-houses-gallery"
 
-interface Cabin {
+interface TraditionalHouse {
   id: number
   title: string
   subtitle?: string
   image: string
-  renderImage: string
   floorPlan: string
   offerPrice: string
   originalPrice?: string
@@ -20,20 +19,21 @@ interface Cabin {
   area: string
   description: string
   isPopular?: boolean
+  isSpecialOffer?: boolean
 }
 
-interface CabinDetailClientProps {
-  cabin: Cabin
+interface TraditionalHouseDetailClientProps {
+  house: TraditionalHouse
 }
 
-export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
-  const whatsappMessage = `Hola! Me interesa la ${cabin.title} (${cabin.bedrooms}, ${cabin.area}) con precio de ${cabin.offerPrice}. Me gustaría recibir más información.`
+export function TraditionalHouseDetailClient({ house }: TraditionalHouseDetailClientProps) {
+  const whatsappMessage = `Hola! Me interesa la ${house.title} (${house.bedrooms}, ${house.area}) con precio de ${house.offerPrice}. Me gustaría recibir más información.`
   const whatsappUrl = `https://wa.me/5493513081798?text=${encodeURIComponent(whatsappMessage)}`
 
   const handleShare = async () => {
     const shareData = {
-      title: `${cabin.title} - Tu Cassa Prefabricadas`,
-      text: `${cabin.description} ${cabin.bedrooms}, ${cabin.area}. Precio desde ${cabin.offerPrice}.`,
+      title: `${house.title} - Tu Cassa Prefabricadas`,
+      text: `${house.description} ${house.bedrooms}, ${house.area}. Precio desde ${house.offerPrice}.`,
       url: window.location.href,
     }
 
@@ -57,13 +57,16 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-6">
             <Button variant="outline" asChild className="mb-4 bg-transparent">
-              <a href="/cabanias">← Volver a Cabañas</a>
+              <a href="/viviendas-tradicionales">← Volver a Viviendas Tradicionales</a>
             </Button>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
               <div className="flex items-center gap-4">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-gray-900">{cabin.title}</h1>
-                {cabin.isPopular && (
-                  <Badge className="bg-[#f75858] text-white px-3 py-1 text-sm font-medium">¡La más elegida!</Badge>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-gray-900">{house.title}</h1>
+                {house.isPopular && (
+                  <Badge className="bg-[#f75858] text-white px-3 py-1 text-sm font-medium">¡La más vendida!</Badge>
+                )}
+                {house.isSpecialOffer && (
+                  <Badge className="bg-green-600 text-white px-3 py-1 text-sm font-medium">¡Oferta especial!</Badge>
                 )}
               </div>
               <Button
@@ -82,14 +85,14 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
                 Compartir
               </Button>
             </div>
-            {cabin.subtitle && <p className="text-[#f75858] font-medium text-lg">{cabin.subtitle}</p>}
+            {house.subtitle && <p className="text-[#f75858] font-medium text-lg">{house.subtitle}</p>}
           </div>
 
           {/* Render Image */}
           <div className="relative h-64 sm:h-80 lg:h-[500px] xl:h-[600px] rounded-2xl overflow-hidden mb-8 shadow-lg">
             <Image
-              src={cabin.image || "/placeholder.svg"}
-              alt={`Foto de ${cabin.title}`}
+              src={house.image || "/placeholder.svg"}
+              alt={`Foto de ${house.title}`}
               fill
               className="object-cover"
               priority
@@ -103,28 +106,28 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
                 <div>
                   <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
                     <span className="text-2xl sm:text-3xl font-bold text-[#f75858]">
-                      Precio oferta {cabin.offerPrice}
+                      Precio oferta {house.offerPrice}
                     </span>
-                    {cabin.originalPrice && (
-                      <span className="text-lg sm:text-xl text-gray-500 line-through">{cabin.originalPrice}</span>
+                    {house.originalPrice && (
+                      <span className="text-lg sm:text-xl text-gray-500 line-through">{house.originalPrice}</span>
                     )}
                   </div>
-                  {cabin.savings && (
-                    <div className="text-base text-green-600 font-medium mb-4">¡Ahorrás {cabin.savings}!</div>
+                  {house.savings && (
+                    <div className="text-base text-green-600 font-medium mb-4">¡Ahorrás {house.savings}!</div>
                   )}
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center text-gray-700 text-lg">
                     <span className="font-medium text-[#f75858] mr-3">•</span>
-                    {cabin.bedrooms}
+                    {house.bedrooms}
                   </div>
                   <div className="flex items-center text-gray-700 text-lg">
                     <span className="font-medium text-[#f75858] mr-3">•</span>
-                    {cabin.area}
+                    {house.area}
                   </div>
                 </div>
               </div>
-              <p className="text-gray-600 text-base mt-6 leading-relaxed">{cabin.description}</p>
+              <p className="text-gray-600 text-base mt-6 leading-relaxed">{house.description}</p>
             </CardContent>
           </Card>
         </div>
@@ -133,11 +136,11 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
       {/* Floor Plan Section */}
       <section className="py-8 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-6 text-center">Plano de la Cabaña</h2>
+          <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-6 text-center">Plano de la Vivienda</h2>
           <div className="relative max-w-4xl mx-auto">
             <Image
-              src={cabin.floorPlan || "/placeholder.svg"}
-              alt={`Plano de ${cabin.title}`}
+              src={house.floorPlan || "/placeholder.svg"}
+              alt={`Plano de ${house.title}`}
               width={800}
               height={600}
               className="w-full h-auto rounded-lg shadow-lg"
@@ -159,7 +162,7 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
               <CardContent className="p-6 sm:p-8">
                 <h3 className="text-xl font-serif text-[#f75858] mb-4">Características:</h3>
                 <div className="space-y-3 text-gray-700">
-                  <p>• Revestimiento exterior en madera cepillada medio tronco.</p>
+                  <p>• Revestimiento exterior en placas de fibrocemento marca Eternit de 6mm.</p>
                   <p>
                     • En el interior, revestimiento en placas de yeso tipo Durlock de 9mm/12mm en habitaciones y
                     fibrocemento en la cocina y el baño.
@@ -177,7 +180,7 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
             {/* Bonificaciones */}
             <Card>
               <CardContent className="p-6 sm:p-8">
-                <h3 className="text-xl font-serif text-[#f75858] mb-4">De regalo con tu cabaña, 100% bonificado:</h3>
+                <h3 className="text-xl font-serif text-[#f75858] mb-4">De regalo con tu vivienda, 100% bonificado:</h3>
                 <div className="space-y-3 text-gray-700">
                   <p>• Juego de baño marca Ferrum o Capea</p>
                   <p>• Rejas en todas las ventanas</p>
@@ -199,9 +202,6 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
                 <p className="font-medium text-[#f75858]">
                   ¡CONSULTÁ PRECIO POR CAMBIO DE CHAPA DE ALUMINIZADA A CHAPA EPOXI COLOR!
                 </p>
-                <p className="font-medium">
-                  NUESTRAS CABAÑAS ESTÁN REVESTIDAS EN MADERA SALIDA DE EUCALIPTUS DE EXCELENTE CALIDAD.
-                </p>
                 <p>
                   Al valor de la vivienda tenés que sumar el costo del flete y armado, que varía dependiendo de la
                   ciudad o localidad en la que se instale tu casa. ¡Consultanos!
@@ -214,7 +214,7 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
           {/* CTA Section */}
           <div className="text-center mt-12">
             <div className="bg-white rounded-2xl p-8 sm:p-12 shadow-lg max-w-2xl mx-auto">
-              <h3 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-4">¿Te interesa esta cabaña?</h3>
+              <h3 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-4">¿Te interesa esta vivienda?</h3>
               <p className="text-gray-600 text-base sm:text-lg mb-8">
                 Contactanos ahora para recibir más información, cotización personalizada y opciones de financiación.
               </p>
@@ -236,8 +236,8 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
         </div>
       </section>
 
-      {/* Gallery Component */}
-      <CabinsGallery />
+      {/* Traditional Houses Gallery Component */}
+      <TraditionalHousesGallery />
     </>
   )
 }
