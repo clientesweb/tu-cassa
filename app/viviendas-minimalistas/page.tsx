@@ -96,9 +96,9 @@ const minimalistas = [
     id: 2,
     title: "VIVIENDA MINIMALISTA 2",
     image: "/images/vivienda-minimalista-2.jpg",
-    offerPrice: "$17.880.000",
+    offerPrice: "$16.880.000",
     bedrooms: "3 dormitorios",
-    area: "62m² + 22m² de gañería",
+    area: "62m² + 22m² de galería",
     description: "Perfecta para familia amplia que busca confort y una casa hermosa para disfrutar de un hogar ideal.",
   },
   {
