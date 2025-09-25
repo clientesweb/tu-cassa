@@ -159,13 +159,13 @@ export function MinimalistHouseDetailClient({ house }: MinimalistHouseDetailClie
               <CardContent className="p-6 sm:p-8">
                 <h3 className="text-xl font-serif text-[#f75858] mb-4">Características:</h3>
                 <div className="space-y-3 text-gray-700">
-                  <p>• Diseño minimalista con líneas limpias y modernas.</p>
-                  <p>• Estructura de steel frame con aislación térmica superior.</p>
-                  <p>• Revestimiento exterior en placas cementíceas texturadas.</p>
-                  <p>• Ventanas de aluminio con DVH (doble vidriado hermético).</p>
-                  <p>• Puertas interiores de diseño minimalista con marcos ocultos.</p>
-                  <p>• Techos con membrana asfáltica y aislación térmica.</p>
-                  <p>• Instalaciones eléctricas y sanitarias completas.</p>
+                  <p>• Revestimiento exterior en placas de fibrocemento.</p>
+                  <p>• En el interior, revestimiento en placas de yeso en habitaciones y Durlock en la cocina y el baño.</p>
+                  <p>• Aislación interna de paredes y aislante especial de techo.</p>
+                  <p>• Ventanas de aluminio con rejas, puerta balcón, puertas placa internas de madera cedrillo con marcos de madera de paraíso.</p>
+                  <p>• Puerta de frente de chapa doble</p>
+                  <p>• La chapa del techo es aluminizada calibre 25 (antigranizo.</p>
+                  <p>• Trapezoidal o sinusoidal con tapas de fibrocemento estilo minimalista (techo plano).</p>
                 </div>
               </CardContent>
             </Card>
@@ -175,14 +175,14 @@ export function MinimalistHouseDetailClient({ house }: MinimalistHouseDetailClie
               <CardContent className="p-6 sm:p-8">
                 <h3 className="text-xl font-serif text-[#f75858] mb-4">De regalo con tu casa, 100% bonificado:</h3>
                 <div className="space-y-3 text-gray-700">
-                  <p>• Juego de baño completo marca Ferrum o Capea</p>
-                  <p>• Grifería moderna de diseño minimalista</p>
-                  <p>• Instalación completa de agua fría y caliente</p>
-                  <p>• Instalación eléctrica con tomas y llaves</p>
-                  <p>• Cerraduras de seguridad en todas las puertas</p>
-                  <p>• Pintura interior de alta calidad (30 litros)</p>
-                  <p>• Tratamiento exterior para revestimientos</p>
-                  <p>• Asesoramiento en diseño de interiores</p>
+                  <p>• Juego de baño marca Ferrum o Capea</p>
+                  <p>• Rejas en todas las ventanas</p>
+                  <p>• Instalación de agua fría - caliente en el baño y cocina</p>
+                  <p>• Colocación de caños de luz</p>
+                  <p>• Cerraduras, llaves y picaportes de todas las puertas</p>
+                  <p>• Grifería para los sanitarios</p>
+                  <p>• Pintura látex para el interior (20 litros)</p>
+                  <p>• Barniz para las puertas placas (4 litros)</p>
                 </div>
               </CardContent>
             </Card>
@@ -192,7 +192,7 @@ export function MinimalistHouseDetailClient({ house }: MinimalistHouseDetailClie
           <Card className="mt-8">
             <CardContent className="p-6 sm:p-8">
               <div className="space-y-4 text-gray-700">
-                <p className="font-medium text-[#f75858]">¡CONSULTÁ OPCIONES DE PERSONALIZACIÓN Y ACABADOS PREMIUM!</p>
+                <p className="font-medium text-[#f75858]">¡Consultá precio por cambio de chapa de aluminizada a chapa epoxi color!</p>
                 <p className="font-medium">
                   NUESTRAS CASAS MINIMALISTAS ESTÁN DISEÑADAS CON LOS MÁS ALTOS ESTÁNDARES DE CALIDAD.
                 </p>
