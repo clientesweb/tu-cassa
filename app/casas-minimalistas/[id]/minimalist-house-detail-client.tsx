@@ -164,7 +164,7 @@ export function MinimalistHouseDetailClient({ house }: MinimalistHouseDetailClie
                   <p>• Aislación interna de paredes y aislante especial de techo.</p>
                   <p>• Ventanas de aluminio con rejas, puerta balcón, puertas placa internas de madera cedrillo con marcos de madera de paraíso.</p>
                   <p>• Puerta de frente de chapa doble</p>
-                  <p>• La chapa del techo es aluminizada calibre 25 (antigranizo.</p>
+                  <p>• La chapa del techo es aluminizada calibre 25 (antigranizo).</p>
                   <p>• Trapezoidal o sinusoidal con tapas de fibrocemento estilo minimalista (techo plano).</p>
                 </div>
               </CardContent>
