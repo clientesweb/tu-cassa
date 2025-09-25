@@ -121,7 +121,7 @@ const specialOffers = [
     originalPrice: "$16.880.000",
     savings: "$1.000.000",
     bedrooms: "3 dormitorios",
-    area: "105 mts",
+    area: "52m² + 18m² de galería",
     description: "Moderna vivienda con 3 dormitorios ideal para familias amplias que buscan su casa perfecta.",
     link: "/viviendas-minimalistas/1",
     isPopular: true,
