@@ -51,16 +51,16 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg sm:text-xl font-serif font-bold mb-4">Navegación Rápida</h3>
             <nav className="space-y-2">
-              <a href="/tradicional" className="block text-sm sm:text-base hover:text-white/80 transition-colors">
+              <a href="/casas-tradicional" className="block text-sm sm:text-base hover:text-white/80 transition-colors">
                 Viviendas Tradicionales
               </a>
-              <a href="/minimalista" className="block text-sm sm:text-base hover:text-white/80 transition-colors">
+              <a href="/casas-minimalistas" className="block text-sm sm:text-base hover:text-white/80 transition-colors">
                 Viviendas Minimalistas
               </a>
               <a href="/cabanias" className="block text-sm sm:text-base hover:text-white/80 transition-colors">
                 Cabañas
               </a>
-              <a href="#metodo" className="block text-sm sm:text-base hover:text-white/80 transition-colors">
+              <a href="c/metedo-constructivo" className="block text-sm sm:text-base hover:text-white/80 transition-colors">
                 Método Constructivo
               </a>
               <a href="/contacto" className="block text-sm sm:text-base hover:text-white/80 transition-colors">
