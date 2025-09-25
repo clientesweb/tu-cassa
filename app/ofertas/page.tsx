@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Tu Cassa Prefabricadas",
     images: [
       {
-        url: "/images/og-image-ofertas.jpg",
+        url: "/images/cabania-entregada-3.jpg",
         width: 1200,
         height: 630,
         alt: "Ofertas Especiales Tu Cassa - Descuentos y promociones",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Ofertas Especiales - Tu Cassa Prefabricadas | Descuentos y Promociones",
     description:
       "Aprovechá nuestras ofertas especiales en casas prefabricadas. Descuentos de hasta $1.000.000, financiación disponible.",
-    images: ["/images/og-image-ofertas.jpg"],
+    images: ["/images/cabania-entregada-3.jpg"],
   },
   robots: {
     index: true,
@@ -137,7 +137,7 @@ export default function OfertasPage() {
       {/* Hero Section */}
       <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
         <Image
-          src="/images/og-image-ofertas.jpg"
+          src="/images/cabania-entregada-3.jpg"
           alt="Ofertas Especiales Tu Cassa"
           fill
           className="object-cover"
