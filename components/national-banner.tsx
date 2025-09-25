@@ -21,7 +21,7 @@ export function NationalBanner() {
 
         {/* Subtitle */}
         <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/95 mb-3 sm:mb-4 max-w-4xl mx-auto leading-relaxed">
-          Instalamos tu vivienda en solo 30 días y +6.000 viviendas instaladas a lo largo del país
+          Instalamos tu vivienda en solo 30 días y +6.000 viviendas instaladas a lo largo y ancho del país
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
