@@ -23,7 +23,7 @@ const deliveredCabins = [
     id: 3,
     image: "/images/cabania-entregada-3.jpg",
     alt: "Cabaña Entregada 3",
-    title: "Cabaña - Buenos Aires",
+    title: "Cabaña - Córdoba",
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const deliveredCabins = [
     id: 6,
     image: "/images/cabania-entregada-6.jpg",
     alt: "Cabaña Entregada 6",
-    title: "Cabaña - Rosario",
+    title: "Cabaña - Córdoba",
   },
 ]
 
