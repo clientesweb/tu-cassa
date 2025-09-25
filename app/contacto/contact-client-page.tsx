@@ -129,7 +129,7 @@ Espero su respuesta. ¡Gracias!`
             Contacta con <span className="text-white">Tu Cassa</span>
           </h1>
           <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Estamos aquí para ayudarte a hacer realidad tu proyecto de vivienda prefabricada. Contáctanos y recibe
+            Estamos para ayudarte a hacer realidad tu proyecto de vivienda prefabricada. Contáctanos y recibe
             asesoramiento personalizado.
           </p>
         </div>
@@ -142,7 +142,7 @@ Espero su respuesta. ¡Gracias!`
             <div>
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-foreground mb-4">Envíanos tu consulta</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Completa el formulario y nos pondremos en contacto contigo a través de WhatsApp para brindarte toda la
+                Completa el formulario y nos pondremos en contacto a través de WhatsApp para brindarte toda la
                 información que necesitas.
               </p>
             </div>
