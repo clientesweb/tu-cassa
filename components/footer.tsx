@@ -2,7 +2,7 @@ import { Facebook, Instagram } from "lucide-react"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
-  const yearsInBusiness = currentYear - 2007 // 17 años atrás desde 2024
+  const yearsInBusiness = 17
 
   return (
     <footer className="bg-[#f75858] text-white">
@@ -54,13 +54,19 @@ export function Footer() {
               <a href="/casas-tradicional" className="block text-sm sm:text-base hover:text-white/80 transition-colors">
                 Viviendas Tradicionales
               </a>
-              <a href="/casas-minimalistas" className="block text-sm sm:text-base hover:text-white/80 transition-colors">
+              <a
+                href="/viviendas-minimalistas"
+                className="block text-sm sm:text-base hover:text-white/80 transition-colors"
+              >
                 Viviendas Minimalistas
               </a>
               <a href="/cabanias" className="block text-sm sm:text-base hover:text-white/80 transition-colors">
                 Cabañas
               </a>
-              <a href="c/metedo-constructivo" className="block text-sm sm:text-base hover:text-white/80 transition-colors">
+              <a
+                href="c/metedo-constructivo"
+                className="block text-sm sm:text-base hover:text-white/80 transition-colors"
+              >
                 Método Constructivo
               </a>
               <a href="/contacto" className="block text-sm sm:text-base hover:text-white/80 transition-colors">

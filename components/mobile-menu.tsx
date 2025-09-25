@@ -42,7 +42,7 @@ export function MobileMenu() {
                 Tradicional
               </a>
               <a
-                href="/casas-minimalistas"
+                href="/viviendas-minimalistas"
                 className="block py-2 text-white/90 hover:text-white transition-colors font-sans"
               >
                 Minimalista

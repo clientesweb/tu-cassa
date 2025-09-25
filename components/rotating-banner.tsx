@@ -21,7 +21,10 @@ export function RotatingBanner() {
     <section className="relative h-96 overflow-hidden">
       {/* Video Background */}
       <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-        <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner-descubri-el-estilo-minimalista-Q6PgvJ8IR2addN6ExL3uddZNnRVaVQ.mp4" type="video/mp4" />
+        <source
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner-descubri-el-estilo-minimalista-Q6PgvJ8IR2addN6ExL3uddZNnRVaVQ.mp4"
+          type="video/mp4"
+        />
       </video>
 
       {/* Overlay */}
@@ -34,7 +37,7 @@ export function RotatingBanner() {
             {rotatingTexts[currentTextIndex]}
           </h2>
 
-          <Link href="/casas-minimalistas">
+          <Link href="/viviendas-minimalistas">
             <Button
               size="lg"
               className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105"

@@ -24,7 +24,7 @@ export function Header() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="font-medium">Viviendas</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid gap-3 p-6 w-[200px]">
+                    <div className="grid gap-3 p-6 w-[200px] bg-white">
                       <a
                         href="#tradicional"
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
@@ -35,7 +35,7 @@ export function Header() {
                         </p>
                       </a>
                       <a
-                        href="/casas-minimalistas"
+                        href="/viviendas-minimalistas"
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                       >
                         <div className="text-sm font-medium leading-none">Minimalista</div>
@@ -80,9 +80,9 @@ export function Header() {
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-tucassa-1-euOGF3by0CDQbPjGXvPngc5GUxzsMy.png"
                   alt="Tu Cassa Logo"
-                  width={140}
-                  height={70}
-                  className="h-14 w-auto"
+                  width={160}
+                  height={80}
+                  className="h-16 w-auto"
                 />
               </a>
             </div>
@@ -97,9 +97,9 @@ export function Header() {
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-tucassa-1-euOGF3by0CDQbPjGXvPngc5GUxzsMy.png"
                 alt="Tu Cassa Logo"
-                width={160}
-                height={80}
-                className="h-16 w-auto"
+                width={180}
+                height={90}
+                className="h-18 w-auto"
               />
             </a>
           </div>
