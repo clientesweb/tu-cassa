@@ -51,7 +51,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg sm:text-xl font-serif font-bold mb-4">Navegación Rápida</h3>
             <nav className="space-y-2">
-              <a href="/casas-tradicional" className="block text-sm sm:text-base hover:text-white/80 transition-colors">
+              <a href="/viviendas-tradicionales" className="block text-sm sm:text-base hover:text-white/80 transition-colors">
                 Viviendas Tradicionales
               </a>
               <a
