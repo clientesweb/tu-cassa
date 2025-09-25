@@ -23,7 +23,7 @@ const deliveredHouses = [
     id: 3,
     image: "/images/vivienda-tradicional-entregada-3.jpg",
     alt: "Vivienda Tradicional Entregada 3",
-    title: "Vivienda Tradicional - Buenos Aires",
+    title: "Vivienda Tradicional - Córdoba",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const deliveredHouses = [
     id: 5,
     image: "/images/vivienda-tradicional-entregada-5.jpg",
     alt: "Vivienda Tradicional Entregada 5",
-    title: "Vivienda Tradicional - Tucumán",
+    title: "Vivienda Tradicional - Córdoba",
   },
   {
     id: 6,
