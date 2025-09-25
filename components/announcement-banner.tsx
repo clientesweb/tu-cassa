@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { MessageCircle } from "lucide-react"
 
-const announcements = ["OFERTA $9.600.000 33m2 sin galería", "¡TU CASSA, ES HOY!"]
+const announcements = ["Oferta $9.600.000 33m² sin galería", "¡TU CASSA, ES HOY!"]
 
 export function AnnouncementBanner() {
   const [currentIndex, setCurrentIndex] = useState(0)
