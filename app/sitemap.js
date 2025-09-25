@@ -37,7 +37,7 @@ export default function sitemap() {
       priority: 0.7,
     },
     {
-      url: "https://www.tucassa.com.ar/galeria",
+      url: "https://www.tucassa.com.ar/cabanias",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.7,
