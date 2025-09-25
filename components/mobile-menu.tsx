@@ -38,7 +38,7 @@ export function MobileMenu() {
               <ChevronDown className={`h-4 w-4 transition-transform ${viviendasOpen ? "rotate-180" : ""}`} />
             </CollapsibleTrigger>
             <CollapsibleContent className="pl-4 space-y-2">
-              <a href="/tradicional" className="block py-2 text-white/90 hover:text-white transition-colors font-sans">
+              <a href="/viviendas-tradicionales" className="block py-2 text-white/90 hover:text-white transition-colors font-sans">
                 Tradicional
               </a>
               <a
