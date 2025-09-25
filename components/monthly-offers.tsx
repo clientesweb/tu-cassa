@@ -39,7 +39,7 @@ const offers = [
     offerPrice: "$15.880.000",
     originalPrice: "$16.880.000",
     bedrooms: "3 dormitorios",
-    area: "105 mts",
+    area: "52m² + 18m² de galería",
     description: "Moderna vivienda con 3 dormitorios ideal para familias amplias que buscan su cassa perfecta.",
   },
 ]
