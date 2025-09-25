@@ -83,7 +83,7 @@ export function HeroSlider() {
                   className="bg-white/10 border-white text-white hover:bg-[#f75858] hover:text-white hover:border-[#f75858]"
                   asChild
                 >
-                  <a href="/cabanias">Cabañas</a>
+                  <a href="/ofertas">Ofertas</a>
                 </Button>
               </div>
             </div>
