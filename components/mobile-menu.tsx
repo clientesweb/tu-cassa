@@ -41,7 +41,10 @@ export function MobileMenu() {
               <a href="/tradicional" className="block py-2 text-white/90 hover:text-white transition-colors font-sans">
                 Tradicional
               </a>
-              <a href="/minimalista" className="block py-2 text-white/90 hover:text-white transition-colors font-sans">
+              <a
+                href="/casas-minimalistas"
+                className="block py-2 text-white/90 hover:text-white transition-colors font-sans"
+              >
                 Minimalista
               </a>
             </CollapsibleContent>

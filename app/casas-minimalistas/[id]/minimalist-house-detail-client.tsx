@@ -5,12 +5,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
-interface Cabin {
+interface MinimalistHouse {
   id: number
   title: string
   subtitle?: string
   image: string
-  renderImage: string
   floorPlan: string
   offerPrice: string
   originalPrice?: string
@@ -21,18 +20,18 @@ interface Cabin {
   isPopular?: boolean
 }
 
-interface CabinDetailClientProps {
-  cabin: Cabin
+interface MinimalistHouseDetailClientProps {
+  house: MinimalistHouse
 }
 
-export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
-  const whatsappMessage = `Hola! Me interesa la ${cabin.title} (${cabin.bedrooms}, ${cabin.area}) con precio de ${cabin.offerPrice}. Me gustaría recibir más información.`
+export function MinimalistHouseDetailClient({ house }: MinimalistHouseDetailClientProps) {
+  const whatsappMessage = `Hola! Me interesa la ${house.title} (${house.bedrooms}, ${house.area}) con precio de ${house.offerPrice}. Me gustaría recibir más información.`
   const whatsappUrl = `https://wa.me/5493513081798?text=${encodeURIComponent(whatsappMessage)}`
 
   const handleShare = async () => {
     const shareData = {
-      title: `${cabin.title} - Tu Cassa Prefabricadas`,
-      text: `${cabin.description} ${cabin.bedrooms}, ${cabin.area}. Precio desde ${cabin.offerPrice}.`,
+      title: `${house.title} - Tu Cassa Prefabricadas`,
+      text: `${house.description} ${house.bedrooms}, ${house.area}. Precio desde ${house.offerPrice}.`,
       url: window.location.href,
     }
 
@@ -51,18 +50,20 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
 
   return (
     <>
-      {/* Hero Section with Render */}
+      {/* Hero Section with House Image */}
       <section className="py-8 sm:py-12">
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-6">
             <Button variant="outline" asChild className="mb-4 bg-transparent">
-              <a href="/cabanias">← Volver a Cabañas</a>
+              <a href="/casas-minimalistas">← Volver a Casas Minimalistas</a>
             </Button>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
               <div className="flex items-center gap-4">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-gray-900">{cabin.title}</h1>
-                {cabin.isPopular && (
-                  <Badge className="bg-[#f75858] text-white px-3 py-1 text-sm font-medium">¡La más elegida!</Badge>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-gray-900">{house.title}</h1>
+                {house.isPopular && (
+                  <Badge className="bg-[#f75858] text-white px-3 py-1 text-sm font-medium">
+                    {house.id === 1 ? "¡La más vendida!" : "¡La más elegida!"}
+                  </Badge>
                 )}
               </div>
               <Button
@@ -81,14 +82,14 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
                 Compartir
               </Button>
             </div>
-            {cabin.subtitle && <p className="text-[#f75858] font-medium text-lg">{cabin.subtitle}</p>}
+            {house.subtitle && <p className="text-[#f75858] font-medium text-lg">{house.subtitle}</p>}
           </div>
 
-          {/* Render Image */}
+          {/* House Image */}
           <div className="relative h-64 sm:h-80 lg:h-[500px] xl:h-[600px] rounded-2xl overflow-hidden mb-8 shadow-lg">
             <Image
-              src={cabin.image || "/placeholder.svg"}
-              alt={`Foto de ${cabin.title}`}
+              src={house.image || "/placeholder.svg"}
+              alt={`Foto de ${house.title}`}
               fill
               className="object-cover"
               priority
@@ -102,28 +103,28 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
                 <div>
                   <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
                     <span className="text-2xl sm:text-3xl font-bold text-[#f75858]">
-                      Precio oferta {cabin.offerPrice}
+                      Precio oferta {house.offerPrice}
                     </span>
-                    {cabin.originalPrice && (
-                      <span className="text-lg sm:text-xl text-gray-500 line-through">{cabin.originalPrice}</span>
+                    {house.originalPrice && (
+                      <span className="text-lg sm:text-xl text-gray-500 line-through">{house.originalPrice}</span>
                     )}
                   </div>
-                  {cabin.savings && (
-                    <div className="text-base text-green-600 font-medium mb-4">¡Ahorrás {cabin.savings}!</div>
+                  {house.savings && (
+                    <div className="text-base text-green-600 font-medium mb-4">¡Ahorrás {house.savings}!</div>
                   )}
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center text-gray-700 text-lg">
                     <span className="font-medium text-[#f75858] mr-3">•</span>
-                    {cabin.bedrooms}
+                    {house.bedrooms}
                   </div>
                   <div className="flex items-center text-gray-700 text-lg">
                     <span className="font-medium text-[#f75858] mr-3">•</span>
-                    {cabin.area}
+                    {house.area}
                   </div>
                 </div>
               </div>
-              <p className="text-gray-600 text-base mt-6 leading-relaxed">{cabin.description}</p>
+              <p className="text-gray-600 text-base mt-6 leading-relaxed">{house.description}</p>
             </CardContent>
           </Card>
         </div>
@@ -132,11 +133,11 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
       {/* Floor Plan Section */}
       <section className="py-8 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-6 text-center">Plano de la Cabaña</h2>
+          <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-6 text-center">Plano de la Vivienda</h2>
           <div className="relative max-w-4xl mx-auto">
             <Image
-              src={cabin.floorPlan || "/placeholder.svg"}
-              alt={`Plano de ${cabin.title}`}
+              src={house.floorPlan || "/placeholder.svg"}
+              alt={`Plano de ${house.title}`}
               width={800}
               height={600}
               className="w-full h-auto rounded-lg shadow-lg"
@@ -158,17 +159,13 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
               <CardContent className="p-6 sm:p-8">
                 <h3 className="text-xl font-serif text-[#f75858] mb-4">Características:</h3>
                 <div className="space-y-3 text-gray-700">
-                  <p>• Revestimiento exterior en madera cepillada medio tronco.</p>
-                  <p>
-                    • En el interior, revestimiento en placas de yeso tipo Durlock de 9mm/12mm en habitaciones y
-                    fibrocemento en la cocina y el baño.
-                  </p>
-                  <p>• Con aislación interna de paredes y aislante especial de techo.</p>
-                  <p>
-                    • Ventanas de aluminio con rejas, puertas placa internas de madera cedrillo con marcos de madera de
-                    paraíso, puerta de frente de chapa doble.
-                  </p>
-                  <p>• La chapa del techo es aluminizada calibre 25 (antigranizo) trapezoidal o sinusoidal.</p>
+                  <p>• Diseño minimalista con líneas limpias y modernas.</p>
+                  <p>• Estructura de steel frame con aislación térmica superior.</p>
+                  <p>• Revestimiento exterior en placas cementíceas texturadas.</p>
+                  <p>• Ventanas de aluminio con DVH (doble vidriado hermético).</p>
+                  <p>• Puertas interiores de diseño minimalista con marcos ocultos.</p>
+                  <p>• Techos con membrana asfáltica y aislación térmica.</p>
+                  <p>• Instalaciones eléctricas y sanitarias completas.</p>
                 </div>
               </CardContent>
             </Card>
@@ -176,16 +173,16 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
             {/* Bonificaciones */}
             <Card>
               <CardContent className="p-6 sm:p-8">
-                <h3 className="text-xl font-serif text-[#f75858] mb-4">De regalo con tu cabaña, 100% bonificado:</h3>
+                <h3 className="text-xl font-serif text-[#f75858] mb-4">De regalo con tu casa, 100% bonificado:</h3>
                 <div className="space-y-3 text-gray-700">
-                  <p>• Juego de baño marca Ferrum o Capea</p>
-                  <p>• Rejas en todas las ventanas</p>
-                  <p>• Instalación de agua fría y caliente en el baño y cocina</p>
-                  <p>• Colocación de caños de luz</p>
-                  <p>• Cerraduras, llaves y picaportes de todas las puertas</p>
-                  <p>• Grifería para los sanitarios</p>
-                  <p>• Pintura látex para el interior (20 litros)</p>
-                  <p>• Barniz para las puertas placas (4 litros)</p>
+                  <p>• Juego de baño completo marca Ferrum o Capea</p>
+                  <p>• Grifería moderna de diseño minimalista</p>
+                  <p>• Instalación completa de agua fría y caliente</p>
+                  <p>• Instalación eléctrica con tomas y llaves</p>
+                  <p>• Cerraduras de seguridad en todas las puertas</p>
+                  <p>• Pintura interior de alta calidad (30 litros)</p>
+                  <p>• Tratamiento exterior para revestimientos</p>
+                  <p>• Asesoramiento en diseño de interiores</p>
                 </div>
               </CardContent>
             </Card>
@@ -195,11 +192,9 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
           <Card className="mt-8">
             <CardContent className="p-6 sm:p-8">
               <div className="space-y-4 text-gray-700">
-                <p className="font-medium text-[#f75858]">
-                  ¡CONSULTÁ PRECIO POR CAMBIO DE CHAPA DE ALUMINIZADA A CHAPA EPOXI COLOR!
-                </p>
+                <p className="font-medium text-[#f75858]">¡CONSULTÁ OPCIONES DE PERSONALIZACIÓN Y ACABADOS PREMIUM!</p>
                 <p className="font-medium">
-                  NUESTRAS CABAÑAS ESTÁN REVESTIDAS EN MADERA SALIDA DE EUCALIPTUS DE EXCELENTE CALIDAD.
+                  NUESTRAS CASAS MINIMALISTAS ESTÁN DISEÑADAS CON LOS MÁS ALTOS ESTÁNDARES DE CALIDAD.
                 </p>
                 <p>
                   Al valor de la vivienda tenés que sumar el costo del flete y armado, que varía dependiendo de la
@@ -213,7 +208,7 @@ export function CabinDetailClient({ cabin }: CabinDetailClientProps) {
           {/* CTA Section */}
           <div className="text-center mt-12">
             <div className="bg-white rounded-2xl p-8 sm:p-12 shadow-lg max-w-2xl mx-auto">
-              <h3 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-4">¿Te interesa esta cabaña?</h3>
+              <h3 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-4">¿Te interesa esta casa?</h3>
               <p className="text-gray-600 text-base sm:text-lg mb-8">
                 Contactanos ahora para recibir más información, cotización personalizada y opciones de financiación.
               </p>

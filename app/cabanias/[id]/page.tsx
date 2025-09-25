@@ -31,7 +31,7 @@ const cabinsData = [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cabania-2-tu-cassa.jpg-gycgvoQ87J7iFIaQ4mwpNTT7Yu5Gd2.jpeg",
     renderImage: "/images/cabania-3-render.jpg",
     floorPlan: "/images/plano-cabania-2.jpg",
-    offerPrice: "$14.180.000",
+    offerPrice: "$14.880.000",
     bedrooms: "2 dormitorios",
     area: "42 m² más 15 m² de galería",
     description:
@@ -58,7 +58,7 @@ const cabinsData = [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cabania-4-tu-cassa.jpg-HPFGVSH2DDSJrH11zNUkGiTj9ohMLg.jpeg",
     renderImage: "/images/cabania-3-render.jpg",
     floorPlan: "/images/plano-cabania-4.jpg",
-    offerPrice: "$17.160.000",
+    offerPrice: "$17.860.000",
     bedrooms: "3 dormitorios",
     area: "70 m² más 25 m² de galería",
     description:
@@ -105,10 +105,10 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
       description: `${cabin.description} ${cabin.area}. Desde ${cabin.offerPrice}. Financiación disponible.`,
       images: [
         {
-          url: cabin.renderImage,
+          url: cabin.image,
           width: 1200,
           height: 630,
-          alt: `Render 3D de ${cabin.title} - Tu Cassa Prefabricadas`,
+          alt: `Foto de ${cabin.title} - Tu Cassa Prefabricadas`,
         },
       ],
       locale: "es_AR",
@@ -119,7 +119,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
       card: "summary_large_image",
       title: `${cabin.title} - Cabaña Prefabricada | Tu Cassa`,
       description: `${cabin.description} ${cabin.area}. Desde ${cabin.offerPrice}.`,
-      images: [cabin.renderImage],
+      images: [cabin.image],
       creator: "@tucassa",
     },
     robots: {

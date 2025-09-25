@@ -9,22 +9,22 @@ import { AnnouncementBanner } from "@/components/announcement-banner"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
 
 export const metadata: Metadata = {
-  title: "Cabañas Prefabricadas Tu Cassa | Diseños Únicos para Complejos Turísticos",
+  title: "Casas Minimalistas Prefabricadas Tu Cassa | Diseños Modernos y Elegantes",
   description:
-    "Descubre nuestras cabañas prefabricadas de alta calidad. Modelos de 2 y 3 dormitorios desde $13.400.000. Descuentos especiales para complejos turísticos a partir de 3 cabañas. Financiación disponible.",
+    "Descubre nuestras casas minimalistas prefabricadas de alta calidad. Modelos de 3 y 4 dormitorios desde $15.080.000. Diseños modernos con líneas limpias y espacios funcionales. Financiación disponible.",
   keywords: [
-    "cabañas prefabricadas",
-    "cabañas de madera",
-    "complejos turísticos",
-    "cabañas córdoba",
+    "casas minimalistas",
+    "viviendas minimalistas",
+    "casas prefabricadas modernas",
+    "casas córdoba",
     "viviendas prefabricadas",
-    "cabañas argentina",
+    "casas argentina",
     "construcción en seco",
-    "cabañas económicas",
-    "refugios de montaña",
-    "turismo rural",
-    "cabañas para alquilar",
-    "inversión turística",
+    "casas económicas",
+    "viviendas modernas",
+    "casas minimalistas argentina",
+    "diseño minimalista",
+    "arquitectura moderna",
   ],
   authors: [{ name: "Tu Cassa Prefabricadas" }],
   creator: "Tu Cassa Prefabricadas",
@@ -36,20 +36,20 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://tu-cassa.vercel.app"),
   alternates: {
-    canonical: "/cabanias",
+    canonical: "/casas-minimalistas",
   },
   openGraph: {
-    title: "Cabañas Prefabricadas Tu Cassa | Diseños Únicos para Complejos Turísticos",
+    title: "Casas Minimalistas Prefabricadas Tu Cassa | Diseños Modernos y Elegantes",
     description:
-      "Descubre nuestras cabañas prefabricadas de alta calidad. Modelos de 2 y 3 dormitorios desde $13.400.000. Descuentos especiales para complejos turísticos a partir de 3 cabañas.",
-    url: "/cabanias",
+      "Descubre nuestras casas minimalistas prefabricadas de alta calidad. Modelos de 3 y 4 dormitorios desde $15.080.000. Diseños modernos con líneas limpias y espacios funcionales.",
+    url: "/casas-minimalistas",
     siteName: "Tu Cassa Prefabricadas",
     images: [
       {
-        url: "/images/og-image-cabanias.jpg",
+        url: "/images/vivienda-minimalista-4.jpg",
         width: 1200,
         height: 630,
-        alt: "Cabañas Tu Cassa - Financiación y recibimos tu usado",
+        alt: "Casas Minimalistas Tu Cassa - Financiación y recibimos tu usado",
       },
     ],
     locale: "es_AR",
@@ -57,10 +57,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cabañas Prefabricadas Tu Cassa | Diseños Únicos para Complejos Turísticos",
+    title: "Casas Minimalistas Prefabricadas Tu Cassa | Diseños Modernos y Elegantes",
     description:
-      "Descubre nuestras cabañas prefabricadas de alta calidad. Modelos de 2 y 3 dormitorios desde $13.400.000. Descuentos especiales para complejos turísticos.",
-    images: ["/images/og-image-cabanias.jpg"],
+      "Descubre nuestras casas minimalistas prefabricadas de alta calidad. Modelos de 3 y 4 dormitorios desde $15.080.000. Diseños modernos con líneas limpias.",
+    images: ["/images/vivienda-minimalista-4.jpg"],
   },
   robots: {
     index: true,
@@ -78,60 +78,54 @@ export const metadata: Metadata = {
   },
 }
 
-const cabins = [
+const minimalistas = [
   {
     id: 1,
-    title: "CABAÑA 1",
-    subtitle: "¡La más elegida!",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/caba%C3%B1a-1-tu-cassa-oferta.jpg-Fs7NF7dRCLeQOQLYpmCRdV8kDeAJv7.jpeg",
-    offerPrice: "$13.400.000",
-    originalPrice: "$14.400.000",
+    title: "VIVIENDA MINIMALISTA 1",
+    subtitle: "¡La más vendida!",
+    image: "/images/vivienda-minimalista-1.jpg",
+    offerPrice: "$15.880.000",
+    originalPrice: "$16.880.000",
     savings: "$1.000.000",
-    bedrooms: "2 dormitorios",
-    area: "30 m² más 15 m² de galería",
-    description:
-      "Esta cabaña consta de 2 dormitorios, baño, cocina, porche y galería lateral que puede usarse como quincho o como cochera.",
+    bedrooms: "3 dormitorios",
+    area: "105 mts",
+    description: "Moderna vivienda con 3 dormitorios ideal para familias amplias que buscan su casa perfecta.",
     isPopular: true,
   },
   {
     id: 2,
-    title: "CABAÑA 2",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cabania-2-tu-cassa.jpg-gycgvoQ87J7iFIaQ4mwpNTT7Yu5Gd2.jpeg",
-    offerPrice: "$14.880.000",
-    bedrooms: "2 dormitorios",
-    area: "42 m² más 15 m² de galería",
-    description:
-      "Hermosa cabaña de dos dormitorios grandes, con una cómoda cocina comedor, baño, porche y galería lateral que puede usarse también como quincho o cochera.",
+    title: "VIVIENDA MINIMALISTA 2",
+    image: "/images/vivienda-minimalista-2.jpg",
+    offerPrice: "$17.880.000",
+    bedrooms: "3 dormitorios",
+    area: "84 m²",
+    description: "Perfecta para familia amplia que busca confort y una casa hermosa para disfrutar de un hogar ideal.",
   },
   {
     id: 3,
-    title: "CABAÑA 3",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cabania-3-tu-cassa.jpg-TvN3GAbxzgDdrFMKiS3kKLgx8mFvGd.jpeg",
-    offerPrice: "$15.850.000",
+    title: "VIVIENDA MINIMALISTA 3",
+    image: "/images/vivienda-minimalista-3.jpg",
+    offerPrice: "$15.080.000",
     bedrooms: "3 dormitorios",
-    area: "52 m² más 18 m² de galería",
+    area: "84 m²",
     description:
-      "Cómoda cabaña de tres dormitorios, con cocina, baño, alero y galería lateral que se puede usar de cochera o quincho.",
+      "Diseño minimalista elegante con espacios funcionales y líneas limpias, perfecta para familias modernas que valoran la simplicidad y el confort.",
   },
   {
     id: 4,
-    title: "CABAÑA 4",
-    subtitle: "¡La más elegida! Ideal complejos turísticos",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cabania-4-tu-cassa.jpg-HPFGVSH2DDSJrH11zNUkGiTj9ohMLg.jpeg",
-    offerPrice: "$17.860.000",
-    bedrooms: "3 dormitorios",
-    area: "70 m² más 25 m² de galería",
+    title: "VIVIENDA MINIMALISTA 4",
+    subtitle: "¡La más elegida!",
+    image: "/images/vivienda-minimalista-4.jpg",
+    offerPrice: "$25.750.000",
+    bedrooms: "4 dormitorios",
+    area: "105 m² cubiertos",
     description:
-      "Amplia cabaña tres dormitorios, con cómoda cocina, baño, alero y galería lateral que se puede usar de cochera o quincho.",
+      "Amplia vivienda minimalista de 4 dormitorios con diseño contemporáneo, espacios generosos y acabados de primera calidad para familias que buscan elegancia y funcionalidad.",
     isPopular: true,
   },
 ]
 
-export default function CabaniasPage() {
+export default function CasasMinimalistasPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <AnnouncementBanner />
@@ -140,8 +134,8 @@ export default function CabaniasPage() {
       {/* Hero Section */}
       <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cabania-4-tu-cassa.jpg-HPFGVSH2DDSJrH11zNUkGiTj9ohMLg.jpeg"
-          alt="Cabañas Tu Cassa"
+          src="/images/vivienda-minimalista-4.jpg"
+          alt="Casas Minimalistas Tu Cassa"
           fill
           className="object-cover"
           priority
@@ -150,43 +144,43 @@ export default function CabaniasPage() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white max-w-4xl px-4">
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-balance">
-              Cabañas <span className="text-[#ff6b6b]">Tu Cassa</span>
+              Casas <span className="text-[#ff6b6b]">Minimalistas</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-6 text-balance">Diseños únicos para tu refugio perfecto</p>
+            <p className="text-xl md:text-2xl mb-6 text-balance">Diseños modernos con líneas limpias y elegantes</p>
             <div className="bg-[#ff6b6b]/90 rounded-lg px-6 py-3 inline-block">
               <p className="text-lg md:text-xl font-bold text-white">
-                Descuentos especiales a partir de 3 cabañas para complejos turísticos
+                Espacios funcionales y arquitectura contemporánea
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Cabins Grid */}
+      {/* Houses Grid */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#f75858] mb-4">Nuestros Modelos</h2>
             <div className="w-20 sm:w-24 h-1 bg-[#f75858] mx-auto mb-6"></div>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
-              Elegí entre nuestros diseños más populares, cada uno pensado para brindarte comodidad y funcionalidad
+              Elegí entre nuestros diseños minimalistas, cada uno pensado para brindarte modernidad y funcionalidad
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
-            {cabins.map((cabin) => (
-              <Card key={cabin.id} className="overflow-hidden hover:shadow-2xl transition-all duration-300 bg-white">
+            {minimalistas.map((casa) => (
+              <Card key={casa.id} className="overflow-hidden hover:shadow-2xl transition-all duration-300 bg-white">
                 <div className="relative">
                   <div className="relative h-64 sm:h-80 lg:h-96 overflow-hidden">
                     <Image
-                      src={cabin.image || "/placeholder.svg"}
-                      alt={cabin.title}
+                      src={casa.image || "/placeholder.svg"}
+                      alt={casa.title}
                       fill
                       className="object-cover transition-transform duration-300 hover:scale-105"
                     />
-                    {cabin.isPopular && (
+                    {casa.isPopular && (
                       <Badge className="absolute top-4 left-4 bg-[#f75858] text-white px-3 py-1 text-sm font-medium">
-                        ¡La más elegida!
+                        {casa.id === 1 ? "¡La más vendida!" : "¡La más elegida!"}
                       </Badge>
                     )}
                   </div>
@@ -194,45 +188,45 @@ export default function CabaniasPage() {
 
                 <CardContent className="p-6 sm:p-8">
                   <div className="mb-4">
-                    <h3 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-2">{cabin.title}</h3>
-                    {cabin.subtitle && (
-                      <p className="text-[#f75858] font-medium text-sm sm:text-base">{cabin.subtitle}</p>
+                    <h3 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-2">{casa.title}</h3>
+                    {casa.subtitle && (
+                      <p className="text-[#f75858] font-medium text-sm sm:text-base">{casa.subtitle}</p>
                     )}
                   </div>
 
                   <div className="mb-6">
                     <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
                       <span className="text-2xl sm:text-3xl font-bold text-[#f75858]">
-                        Precio oferta {cabin.offerPrice}
+                        Precio oferta {casa.offerPrice}
                       </span>
-                      {cabin.originalPrice && (
-                        <span className="text-lg sm:text-xl text-gray-500 line-through">{cabin.originalPrice}</span>
+                      {casa.originalPrice && (
+                        <span className="text-lg sm:text-xl text-gray-500 line-through">{casa.originalPrice}</span>
                       )}
                     </div>
-                    {cabin.savings && (
-                      <div className="text-sm sm:text-base text-green-600 font-medium">¡Ahorrás {cabin.savings}!</div>
+                    {casa.savings && (
+                      <div className="text-sm sm:text-base text-green-600 font-medium">¡Ahorrás {casa.savings}!</div>
                     )}
                   </div>
 
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center text-gray-700 text-base sm:text-lg">
                       <span className="font-medium text-[#f75858] mr-3">•</span>
-                      {cabin.bedrooms}
+                      {casa.bedrooms}
                     </div>
                     <div className="flex items-center text-gray-700 text-base sm:text-lg">
                       <span className="font-medium text-[#f75858] mr-3">•</span>
-                      {cabin.area}
+                      {casa.area}
                     </div>
                   </div>
 
-                  <p className="text-gray-600 text-sm sm:text-base mb-8 leading-relaxed">{cabin.description}</p>
+                  <p className="text-gray-600 text-sm sm:text-base mb-8 leading-relaxed">{casa.description}</p>
 
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Button
                       className="flex-1 bg-[#f75858] hover:bg-[#f75858]/90 text-white font-medium py-3 text-base"
                       asChild
                     >
-                      <a href={`/cabanias/${cabin.id}`}>Ver detalles</a>
+                      <a href={`/casas-minimalistas/${casa.id}`}>Ver detalles</a>
                     </Button>
                     <Button
                       variant="outline"
@@ -256,8 +250,8 @@ export default function CabaniasPage() {
                 ¿Necesitás un diseño personalizado?
               </h3>
               <p className="text-gray-600 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
-                Ofrecemos descuentos especiales para complejos turísticos a partir de 3 cabañas. Contactanos para una
-                cotización personalizada.
+                Creamos diseños minimalistas únicos adaptados a tus necesidades. Contactanos para una cotización
+                personalizada.
               </p>
               <Button size="lg" className="bg-[#f75858] hover:bg-[#f75858]/90 text-white px-8 py-4 text-lg" asChild>
                 <a href="https://wa.me/5493513081798" target="_blank" rel="noopener noreferrer">
