@@ -139,13 +139,13 @@ export function MonthlyOffers() {
               </CollapsibleTrigger>
               <CollapsibleContent className="mt-3 sm:mt-4 space-y-1 sm:space-y-2 bg-white rounded-lg border border-gray-200 p-3 sm:p-4 shadow-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-top-2 data-[state=open]:slide-in-from-top-2 duration-300">
                 <a
-                  href="/tradicional"
+                  href="/casas-tradicional"
                   className="block py-2 sm:py-3 px-3 sm:px-4 text-gray-700 hover:text-[#f75858] hover:bg-gray-50 rounded-md transition-colors duration-200 text-xs sm:text-sm md:text-base"
                 >
                   Tradicionales
                 </a>
                 <a
-                  href="/minimalista"
+                  href="/casas-minimalistas"
                   className="block py-2 sm:py-3 px-3 sm:px-4 text-gray-700 hover:text-[#f75858] hover:bg-gray-50 rounded-md transition-colors duration-200 text-xs sm:text-sm md:text-base"
                 >
                   Minimalistas
