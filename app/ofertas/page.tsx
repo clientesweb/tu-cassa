@@ -275,7 +275,7 @@ export default function OfertasPage() {
               </div>
               <div className="text-center">
                 <Button size="lg" className="bg-[#f75858] hover:bg-[#f75858]/90 text-white px-8 py-4 text-lg" asChild>
-                  <a href="https://wa.me/5493513081798" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/5493517623951" target="_blank" rel="noopener noreferrer">
                     Consultá todas nuestras ofertas
                   </a>
                 </Button>
