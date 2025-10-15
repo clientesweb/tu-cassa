@@ -24,7 +24,7 @@ export function AnnouncementBanner() {
             <p className="text-xs md:text-sm font-medium">{announcements[currentIndex]}</p>
           </div>
           <a
-            href="https://wa.me/5493513081798"
+            href="https://wa.me/5493517623951"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-[#f75858] px-2 py-1 rounded text-xs font-medium hover:bg-gray-100 transition-colors flex items-center gap-1 whitespace-nowrap"
