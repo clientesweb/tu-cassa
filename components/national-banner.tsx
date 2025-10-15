@@ -8,7 +8,7 @@ export function NationalBanner() {
     const message = encodeURIComponent(
       "Hola! Me interesa conocer más sobre sus viviendas prefabricadas. ¿Podrían brindarme información?",
     )
-    window.open(`https://wa.me/5493513081798?text=${message}`, "_blank")
+    window.open(`https://wa.me/5493517623951?text=${message}`, "_blank")
   }
 
   return (
