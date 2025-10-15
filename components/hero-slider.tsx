@@ -73,7 +73,7 @@ export function HeroSlider() {
               <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-pretty">{slide.description}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-[#f75858] hover:bg-[#f75858]/90 text-white" asChild>
-                  <a href="https://wa.me/5493513081798" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/5493517623951" target="_blank" rel="noopener noreferrer">
                     Contactar
                   </a>
                 </Button>
