@@ -233,7 +233,7 @@ export default function CasasMinimalistasPage() {
                       className="flex-1 border-[#f75858] text-[#f75858] hover:bg-[#f75858] hover:text-white py-3 text-base bg-transparent"
                       asChild
                     >
-                      <a href="https://wa.me/5493513081798" target="_blank" rel="noopener noreferrer">
+                      <a href="https://wa.me/5493517623951" target="_blank" rel="noopener noreferrer">
                         Contactar ahora
                       </a>
                     </Button>
@@ -258,7 +258,7 @@ export default function CasasMinimalistasPage() {
                 className="bg-[#f75858] hover:bg-[#f75858]/90 text-white px-4 sm:px-8 py-3 sm:py-4 text-sm sm:text-lg w-full sm:w-auto max-w-xs sm:max-w-none mx-auto"
                 asChild
               >
-                <a href="https://wa.me/5493513081798" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/5493517623951" target="_blank" rel="noopener noreferrer">
                   <span className="block sm:hidden">Cotización Personalizada</span>
                   <span className="hidden sm:block">Solicitar Cotización Personalizada</span>
                 </a>
