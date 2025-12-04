@@ -1,9 +1,9 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { MessageCircle } from "lucide-react"
+import Link from "next/link"
 
-const announcements = ["Oferta $9.600.000 33m² sin galería", "¡TU CASSA, ES HOY!"]
+const announcements = ["VIVIENDA MINIMALISTA 1 ¡La más vendida!"]
 
 export function AnnouncementBanner() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -23,15 +23,12 @@ export function AnnouncementBanner() {
           <div className="animate-slide-down flex-1">
             <p className="text-xs md:text-sm font-medium">{announcements[currentIndex]}</p>
           </div>
-          <a
-            href="https://wa.me/5493517623951"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white text-[#f75858] px-2 py-1 rounded text-xs font-medium hover:bg-gray-100 transition-colors flex items-center gap-1 whitespace-nowrap"
+          <Link
+            href="/viviendas-minimalistas/1"
+            className="bg-white text-[#f75858] px-2 py-1 rounded text-xs font-medium hover:bg-gray-100 transition-colors whitespace-nowrap"
           >
-            <MessageCircle className="h-3 w-3" />
-            Consultar
-          </a>
+            Ver detalles
+          </Link>
         </div>
       </div>
     </div>
