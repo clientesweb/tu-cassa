@@ -2,6 +2,7 @@ import { AnnouncementBanner } from "@/components/announcement-banner"
 import { Header } from "@/components/header"
 import { HeroSlider } from "@/components/hero-slider"
 import { MonthlyOffers } from "@/components/monthly-offers"
+import { ChristmasBanner } from "@/components/christmas-banner"
 import { NationalBanner } from "@/components/national-banner"
 import { RotatingBanner } from "@/components/rotating-banner"
 import { Footer } from "@/components/footer"
@@ -73,6 +74,7 @@ export default function HomePage() {
         <AnnouncementBanner />
         <Header />
         <HeroSlider />
+        <ChristmasBanner />
         <MonthlyOffers />
         <NationalBanner />
         <RotatingBanner />

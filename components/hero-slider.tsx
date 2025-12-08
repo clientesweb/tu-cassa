@@ -7,22 +7,19 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const slides = [
   {
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner-1-tu-cassa.jpg-B3rMyrYJ7XGUdaCwphjdnYVOsP6S8s.jpeg",
+    image: "/images/banner-1-tu-cassa.jpeg",
     title: "Precios inmejorables!",
     subtitle: "Entrega al instante",
-    description: "Obtén tu casa prefabricada con la mejor relación calidad-precio del mercado",
+    description: "Tu vivienda prefabricada con la mejor relación calidad-precio del mercado",
   },
   {
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner-2-tu-cassa.jpg-O9IW4onaiG4iPNKaVN1JbW7XHV2zaP.jpeg",
+    image: "/images/banner-2-tu-cassa.jpeg",
     title: "Elegí tu estilo",
     subtitle: "Recibimos tu usado",
     description: "Diseños tradicionales y minimalistas adaptados a tus necesidades",
   },
   {
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner-3-tu-cassa.jpg-z3n7qg988o399OwgfTeUo4DWDa0Dgs.jpeg",
+    image: "/images/banner-3-tu-cassa.jpeg",
     title: "+17 años de trayectoria",
     subtitle: "Nuestra Experiencia nos Avala",
     description: "Más de una década construyendo hogares de calidad y confianza",
