@@ -77,13 +77,7 @@ export function Header() {
 
             <div className="absolute left-1/2 transform -translate-x-1/2">
               <a href="/">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-tucassa-1-euOGF3by0CDQbPjGXvPngc5GUxzsMy.png"
-                  alt="Tu Cassa Logo"
-                  width={160}
-                  height={80}
-                  className="h-16 w-auto"
-                />
+                <Image src="/logo-tucassa-1.png" alt="Tu Cassa Logo" width={160} height={80} className="h-16 w-auto" />
               </a>
             </div>
 
@@ -94,13 +88,7 @@ export function Header() {
           {/* Logo Center - Desktop */}
           <div className="hidden md:block flex-shrink-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
             <a href="/">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-tucassa-1-euOGF3by0CDQbPjGXvPngc5GUxzsMy.png"
-                alt="Tu Cassa Logo"
-                width={180}
-                height={90}
-                className="h-18 w-auto"
-              />
+              <Image src="/logo-tucassa-1.png" alt="Tu Cassa Logo" width={180} height={90} className="h-18 w-auto" />
             </a>
           </div>
 
