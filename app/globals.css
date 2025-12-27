@@ -3,7 +3,8 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Ensure CSS variables are available immediately */
+/* Critical CSS - Ensure immediate rendering without FOUC */
+/* Force CSS variables to be available immediately - highest priority */
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -42,6 +43,12 @@
   /* Add font family fallbacks for immediate rendering */
   --font-montserrat: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-bree-serif: "Bree Serif", Georgia, serif;
+}
+
+/* Force immediate visibility of HTML to prevent white flash */
+html {
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 @theme inline {
@@ -87,7 +94,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* Ensure base styles are applied immediately before any other content loads */
+/* Ensure base styles are applied immediately with !important to override any cache issues */
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -95,14 +102,19 @@
 
   html {
     scroll-behavior: smooth;
+    /* Prevent any FOUC */
+    min-height: 100vh !important;
   }
 
   body {
     @apply bg-background text-foreground;
-    /* Prevent flash of unstyled content */
-    min-height: 100vh;
+    /* Prevent flash of unstyled content with critical inline styles */
+    min-height: 100vh !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Force render blocking to ensure styles are applied */
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
 

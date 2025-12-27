@@ -7,14 +7,16 @@ const breeSerif = Bree_Serif({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-bree-serif",
-  display: "swap",
+  display: "block", // Changed from 'swap' to 'block' to prevent FOUC
+  preload: true, // Ensure font is preloaded
 })
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-montserrat",
-  display: "swap",
+  display: "block", // Changed from 'swap' to 'block' to prevent FOUC
+  preload: true, // Ensure font is preloaded
 })
 
 export const metadata = {
@@ -104,15 +106,36 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className={`${breeSerif.variable} ${montserrat.variable} antialiased`}>
+    <html
+      lang="es"
+      className={`${breeSerif.variable} ${montserrat.variable} antialiased`}
+      style={{ visibility: "visible" }}
+    >
       <head>
         <meta name="theme-color" content="#ef4444" />
         <meta name="msapplication-TileColor" content="#ef4444" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
+
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
         <StructuredData type="organization" />
         <StructuredData type="website" />
       </head>
-      <body className="font-sans">{children}</body>
+      <body
+        className="font-sans"
+        style={{
+          margin: 0,
+          padding: 0,
+          minHeight: "100vh",
+          backgroundColor: "oklch(1 0 0)",
+          color: "oklch(0.145 0 0)",
+          fontFamily: 'var(--font-montserrat), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+        }}
+      >
+        {children}
+      </body>
     </html>
   )
 }
