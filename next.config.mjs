@@ -14,8 +14,8 @@ const nextConfig = {
   async headers() {
     return [
       {
-        // CSS files - force revalidation but allow caching
-        source: '/_next/static/css/:path*',
+        // CSS and JS files with content hash - cache aggressively
+        source: '/_next/static/:path*',
         headers: [
           {
             key: 'Cache-Control',
@@ -24,17 +24,7 @@ const nextConfig = {
         ],
       },
       {
-        // JS files - force revalidation but allow caching
-        source: '/_next/static/chunks/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        // HTML pages - no cache
+        // HTML pages - always revalidate to get fresh content
         source: '/:path*',
         headers: [
           {
@@ -44,13 +34,6 @@ const nextConfig = {
         ],
       },
     ]
-  },
-  webpack: (config, { dev }) => {
-    if (!dev) {
-      config.output.filename = 'static/chunks/[name].[contenthash].js'
-      config.output.chunkFilename = 'static/chunks/[name].[contenthash].js'
-    }
-    return config
   },
   generateBuildId: async () => {
     return `build-${Date.now()}`
