@@ -11,12 +11,11 @@ const cabinsData = [
     id: 1,
     title: "CABAÑA 1",
     subtitle: "¡La más elegida!",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/caba%C3%B1a-1-tu-cassa-oferta.jpg-Fs7NF7dRCLeQOQLYpmCRdV8kDeAJv7.jpeg",
+    image: "/images/caba-c3-b1a-1-tu-cassa-oferta.jpeg",
     renderImage: "/images/cabania-3-render.jpg",
     floorPlan: "/images/plano-cabania-1.jpg",
-    offerPrice: "$13.400.000",
-    originalPrice: "$14.400.000",
+    offerPrice: "$14.800.000",
+    originalPrice: "$15.800.000",
     savings: "$1.000.000",
     bedrooms: "2 dormitorios",
     area: "30 m² más 15 m² de galería",
@@ -27,11 +26,10 @@ const cabinsData = [
   {
     id: 2,
     title: "CABAÑA 2",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cabania-2-tu-cassa.jpg-gycgvoQ87J7iFIaQ4mwpNTT7Yu5Gd2.jpeg",
+    image: "/images/cabania-2-tu-cassa.jpeg",
     renderImage: "/images/cabania-3-render.jpg",
     floorPlan: "/images/plano-cabania-2.jpg",
-    offerPrice: "$14.880.000",
+    offerPrice: "$16.280.000",
     bedrooms: "2 dormitorios",
     area: "42 m² más 15 m² de galería",
     description:
@@ -40,11 +38,10 @@ const cabinsData = [
   {
     id: 3,
     title: "CABAÑA 3",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cabania-3-tu-cassa.jpg-TvN3GAbxzgDdrFMKiS3kKLgx8mFvGd.jpeg",
+    image: "/images/cabania-3-tu-cassa.jpeg",
     renderImage: "/images/cabania-3-render.jpg",
     floorPlan: "/images/plano-cabania-3.jpg",
-    offerPrice: "$15.850.000",
+    offerPrice: "$17.250.000",
     bedrooms: "3 dormitorios",
     area: "52 m² más 18 m² de galería",
     description:
@@ -54,11 +51,10 @@ const cabinsData = [
     id: 4,
     title: "CABAÑA 4",
     subtitle: "¡La más elegida! Ideal complejos turísticos",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cabania-4-tu-cassa.jpg-HPFGVSH2DDSJrH11zNUkGiTj9ohMLg.jpeg",
+    image: "/images/cabania-4-tu-cassa.jpeg",
     renderImage: "/images/cabania-3-render.jpg",
     floorPlan: "/images/plano-cabania-4.jpg",
-    offerPrice: "$17.860.000",
+    offerPrice: "$19.260.000",
     bedrooms: "3 dormitorios",
     area: "70 m² más 25 m² de galería",
     description:

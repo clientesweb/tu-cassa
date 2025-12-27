@@ -7,12 +7,14 @@ const breeSerif = Bree_Serif({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-bree-serif",
+  display: "swap",
 })
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-montserrat",
+  display: "swap",
 })
 
 export const metadata = {
@@ -106,10 +108,6 @@ export default function RootLayout({
         <meta name="theme-color" content="#ef4444" />
         <meta name="msapplication-TileColor" content="#ef4444" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         <StructuredData type="organization" />
         <StructuredData type="website" />
       </head>

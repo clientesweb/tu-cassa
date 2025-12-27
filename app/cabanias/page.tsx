@@ -83,10 +83,9 @@ const cabins = [
     id: 1,
     title: "CABAÑA 1",
     subtitle: "¡La más elegida!",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/caba%C3%B1a-1-tu-cassa-oferta.jpg-Fs7NF7dRCLeQOQLYpmCRdV8kDeAJv7.jpeg",
-    offerPrice: "$13.400.000",
-    originalPrice: "$14.400.000",
+    image: "/images/caba-c3-b1a-1-tu-cassa-oferta.jpeg",
+    offerPrice: "$14.800.000",
+    originalPrice: "$15.800.000",
     savings: "$1.000.000",
     bedrooms: "2 dormitorios",
     area: "30 m² más 15 m² de galería",
@@ -97,9 +96,8 @@ const cabins = [
   {
     id: 2,
     title: "CABAÑA 2",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cabania-2-tu-cassa.jpg-gycgvoQ87J7iFIaQ4mwpNTT7Yu5Gd2.jpeg",
-    offerPrice: "$14.880.000",
+    image: "/images/cabania-2-tu-cassa.jpeg",
+    offerPrice: "$16.280.000",
     bedrooms: "2 dormitorios",
     area: "42 m² más 15 m² de galería",
     description:
@@ -108,9 +106,8 @@ const cabins = [
   {
     id: 3,
     title: "CABAÑA 3",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cabania-3-tu-cassa.jpg-TvN3GAbxzgDdrFMKiS3kKLgx8mFvGd.jpeg",
-    offerPrice: "$15.850.000",
+    image: "/images/cabania-3-tu-cassa.jpeg",
+    offerPrice: "$17.250.000",
     bedrooms: "3 dormitorios",
     area: "52 m² más 18 m² de galería",
     description:
@@ -120,9 +117,8 @@ const cabins = [
     id: 4,
     title: "CABAÑA 4",
     subtitle: "¡La más elegida! Ideal complejos turísticos",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cabania-4-tu-cassa.jpg-HPFGVSH2DDSJrH11zNUkGiTj9ohMLg.jpeg",
-    offerPrice: "$17.860.000",
+    image: "/images/cabania-4-tu-cassa.jpeg",
+    offerPrice: "$19.260.000",
     bedrooms: "3 dormitorios",
     area: "70 m² más 25 m² de galería",
     description:
@@ -139,13 +135,7 @@ export default function CabaniasPage() {
 
       {/* Hero Section */}
       <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
-        <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cabania-4-tu-cassa.jpg-HPFGVSH2DDSJrH11zNUkGiTj9ohMLg.jpeg"
-          alt="Cabañas Tu Cassa"
-          fill
-          className="object-cover"
-          priority
-        />
+        <Image src="/images/cabania-4-tu-cassa.jpeg" alt="Cabañas Tu Cassa" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white max-w-4xl px-4">

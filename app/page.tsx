@@ -1,8 +1,13 @@
 import { AnnouncementBanner } from "@/components/announcement-banner"
 import { Header } from "@/components/header"
 import { HeroSlider } from "@/components/hero-slider"
+import { TrustSignals } from "@/components/trust-signals"
+import { UrgencyBanner } from "@/components/urgency-banner"
 import { MonthlyOffers } from "@/components/monthly-offers"
 import { ChristmasBanner } from "@/components/christmas-banner"
+import { Testimonials } from "@/components/testimonials"
+import { FAQSection } from "@/components/faq-section"
+import { CTAHero } from "@/components/cta-hero"
 import { NationalBanner } from "@/components/national-banner"
 import { RotatingBanner } from "@/components/rotating-banner"
 import { Footer } from "@/components/footer"
@@ -74,10 +79,15 @@ export default function HomePage() {
         <AnnouncementBanner />
         <Header />
         <HeroSlider />
+        <TrustSignals />
         <ChristmasBanner />
+        <UrgencyBanner />
         <MonthlyOffers />
         <NationalBanner />
+        <Testimonials />
         <RotatingBanner />
+        <FAQSection />
+        <CTAHero />
         <Footer />
       </main>
 
