@@ -81,13 +81,6 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/manifest.json",
-  themeColor: "#ef4444",
-  colorScheme: "light",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
   verification: {
     google: "google-site-verification-code-here",
     yandex: "yandex-verification-code-here",
@@ -95,6 +88,14 @@ export const metadata = {
   },
   category: "construction",
   generator: "v0.app",
+}
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: "#ef4444",
+  colorScheme: "light",
 }
 
 export default function RootLayout({
