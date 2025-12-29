@@ -13,7 +13,7 @@ export function UrgencyBanner() {
         </div>
 
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
-          ¡Ahorrá hasta $1.400.000 en modelos seleccionados!
+          ¡Ahorrá hasta $1.000.000 en modelos seleccionados!
         </h2>
 
         <p className="text-base sm:text-lg mb-6 max-w-2xl mx-auto">
