@@ -7,16 +7,18 @@ const breeSerif = Bree_Serif({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-bree-serif",
-  display: "block", // Changed from 'swap' to 'block' to prevent FOUC
-  preload: true, // Ensure font is preloaded
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 })
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-montserrat",
-  display: "block", // Changed from 'swap' to 'block' to prevent FOUC
-  preload: true, // Ensure font is preloaded
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
 })
 
 export const metadata = {
@@ -106,12 +108,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="es"
-      className={`${breeSerif.variable} ${montserrat.variable} antialiased`}
-      style={{ visibility: "visible" }}
-    >
+    <html lang="es" className={`${breeSerif.variable} ${montserrat.variable} antialiased`}>
       <head>
+        <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta httpEquiv="Pragma" content="no-cache" />
+        <meta httpEquiv="Expires" content="0" />
+
         <meta name="theme-color" content="#ef4444" />
         <meta name="msapplication-TileColor" content="#ef4444" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
@@ -123,19 +125,7 @@ export default function RootLayout({
         <StructuredData type="organization" />
         <StructuredData type="website" />
       </head>
-      <body
-        className="font-sans"
-        style={{
-          margin: 0,
-          padding: 0,
-          minHeight: "100vh",
-          backgroundColor: "oklch(1 0 0)",
-          color: "oklch(0.145 0 0)",
-          fontFamily: 'var(--font-montserrat), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-        }}
-      >
-        {children}
-      </body>
+      <body className="font-sans">{children}</body>
     </html>
   )
 }
