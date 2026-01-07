@@ -44,11 +44,15 @@
 
   --font-montserrat: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-bree-serif: "Bree Serif", Georgia, serif;
+  /* Agregada variable para Bebas Neue (reemplazo de Now ultragruesa) */
+  --font-bebas-neue: "Bebas Neue", Impact, "Arial Black", sans-serif;
 }
 
 @theme inline {
   --font-sans: var(--font-montserrat);
   --font-serif: var(--font-bree-serif);
+  /* Agregada font-display para títulos ultragruesos */
+  --font-display: var(--font-bebas-neue);
 
   /* Color System */
   --color-background: var(--background);

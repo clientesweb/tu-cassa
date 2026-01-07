@@ -10,7 +10,7 @@ const traditionallHouses = [
     id: 1,
     type: "Tradicional",
     title: "VIVIENDA TRADICIONAL 1",
-    image: "/images/vivienda-tradicional-1.jpg",
+    image: "/images/vivienda-tradicional-1.webp",
     offerPrice: "$13.980.000",
     originalPrice: "$14.980.000",
     bedrooms: "2 dormitorios",
@@ -22,7 +22,7 @@ const traditionallHouses = [
     id: 2,
     type: "Tradicional",
     title: "VIVIENDA TRADICIONAL 2",
-    image: "/images/vivienda-tradicional-2.jpg",
+    image: "/images/vivienda-tradicional-2.webp",
     offerPrice: "$14.780.000",
     bedrooms: "2 dormitorios",
     area: "42 m² más 15 m² de galería",
@@ -33,7 +33,7 @@ const traditionallHouses = [
     id: 3,
     type: "Tradicional",
     title: "VIVIENDA TRADICIONAL 3",
-    image: "/images/vivienda-tradicional-3.jpg",
+    image: "/images/vivienda-tradicional-3.webp",
     offerPrice: "$15.980.000",
     bedrooms: "3 dormitorios",
     area: "52 m² más 18 m² de galería",
@@ -44,7 +44,7 @@ const traditionallHouses = [
     id: 4,
     type: "Tradicional",
     title: "VIVIENDA TRADICIONAL 4",
-    image: "/images/vivienda-tradicional-4.jpg",
+    image: "/images/vivienda-tradicional-4.webp",
     offerPrice: "$18.190.000",
     bedrooms: "3 dormitorios",
     area: "70 m² más 25 m² de galería",
@@ -56,7 +56,7 @@ const traditionallHouses = [
     id: 5,
     type: "Tradicional",
     title: "VIVIENDA TRADICIONAL 5",
-    image: "/images/vivienda-tradicional-5.jpg",
+    image: "/images/vivienda-tradicional-5.webp",
     offerPrice: "$22.550.000",
     bedrooms: "4 dormitorios",
     area: "84 m² más 35 m² de galería",
@@ -67,7 +67,7 @@ const traditionallHouses = [
     id: 6,
     type: "Tradicional",
     title: "VIVIENDA TRADICIONAL 6",
-    image: "/images/vivienda-tradicional-6.jpg",
+    image: "/images/vivienda-tradicional-6.webp",
     offerPrice: "$22.650.000",
     bedrooms: "4 dormitorios",
     area: "105 m² cubiertos",
@@ -77,7 +77,7 @@ const traditionallHouses = [
     id: 7,
     type: "Tradicional",
     title: "VIVIENDA TRADICIONAL 7",
-    image: "/images/vivienda-tradicional-7.jpg",
+    image: "/images/vivienda-tradicional-7.webp",
     offerPrice: "$15.250.000",
     bedrooms: "3 dormitorios",
     area: "57 m² más 11 m² de galería",
@@ -114,17 +114,11 @@ const remainingHouses = traditionallHouses.slice(6)
 
 export function MonthlyOffers() {
   return (
-    <section
-      className="py-12 sm:py-16 lg:py-20 px-4 bg-gray-50 bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: "url('/images/fondo-2026.webp')",
-        backgroundAttachment: "fixed",
-      }}
-    >
+    <section className="py-12 sm:py-16 lg:py-20 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#f75858] mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display text-[#f75858] mb-4 uppercase tracking-wide">
             Nuestras Viviendas Tradicionales
           </h2>
           <div className="w-20 sm:w-24 h-1 bg-[#f75858] mx-auto mb-6"></div>

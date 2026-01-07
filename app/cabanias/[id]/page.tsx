@@ -51,7 +51,7 @@ const cabinsData = [
     id: 4,
     title: "CABAÑA 4",
     subtitle: "¡La más elegida! Ideal complejos turísticos",
-    image: "/images/cabania-4-tu-cassa.jpeg",
+    image: "/images/cabania-4.webp",
     renderImage: "/images/cabania-3-render.jpg",
     floorPlan: "/images/plano-cabania-4.jpg",
     offerPrice: "$19.260.000",

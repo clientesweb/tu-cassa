@@ -84,7 +84,7 @@ const specialOffers = [
     category: "Vivienda Tradicional",
     title: "VIVIENDA TRADICIONAL 1",
     subtitle: "¡OFERTA ESPECIAL!",
-    image: "/images/vivienda-tradicional-1.jpeg",
+    image: "/images/vivienda-tradicional-1.webp",
     offerPrice: "$13.980.000",
     originalPrice: "$14.980.000",
     savings: "$1.000.000",

@@ -1,5 +1,5 @@
 import type React from "react"
-import { Bree_Serif, Montserrat } from "next/font/google"
+import { Bree_Serif, Montserrat, Bebas_Neue } from "next/font/google"
 import { StructuredData } from "@/components/structured-data"
 import "./globals.css"
 
@@ -21,6 +21,16 @@ const montserrat = Montserrat({
   preload: true,
   adjustFontFallback: true,
   fallback: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+})
+
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400"],
+  variable: "--font-bebas-neue",
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
+  fallback: ["Impact", "Arial Black", "sans-serif"],
 })
 
 export const metadata = {
@@ -110,7 +120,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className={`${breeSerif.variable} ${montserrat.variable} antialiased`}>
+    <html lang="es" className={`${breeSerif.variable} ${montserrat.variable} ${bebasNeue.variable} antialiased`}>
       <head>
         <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta httpEquiv="Pragma" content="no-cache" />
@@ -130,6 +140,13 @@ export default function RootLayout({
         <link
           rel="preload"
           href="https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"

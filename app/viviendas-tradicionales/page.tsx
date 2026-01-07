@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Tu Cassa Prefabricadas",
     images: [
       {
-        url: "/images/vivienda-tradicional-4.jpg",
+        url: "/images/vivienda-tradicional-4.webp",
         width: 1200,
         height: 630,
         alt: "Casas Tradicionales Tu Cassa - Financiación y recibimos tu usado",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Casas Tradicionales Prefabricadas Tu Cassa | Diseños Clásicos y Funcionales",
     description:
       "Descubre nuestras casas tradicionales prefabricadas de alta calidad. Modelos de 2, 3 y 4 dormitorios desde $12.580.000. Diseños clásicos.",
-    images: ["/images/vivienda-tradicional-4.jpg"],
+    images: ["/images/vivienda-tradicional-4.webp"],
   },
   robots: {
     index: true,
@@ -83,7 +83,7 @@ const tradicionales = [
     id: 1,
     title: "VIVIENDA TRADICIONAL 1",
     subtitle: "Oferta especial",
-    image: "/images/vivienda-tradicional-1.jpeg",
+    image: "/images/vivienda-tradicional-1.webp",
     offerPrice: "$13.980.000",
     originalPrice: "$14.980.000",
     savings: "$1.000.000",
@@ -95,7 +95,7 @@ const tradicionales = [
   {
     id: 2,
     title: "VIVIENDA TRADICIONAL 2",
-    image: "/images/vivienda-tradicional-2.jpeg",
+    image: "/images/vivienda-tradicional-2.webp",
     offerPrice: "$14.780.000",
     bedrooms: "2 dormitorios",
     area: "42 m² más 15 m² de galería",
@@ -105,7 +105,7 @@ const tradicionales = [
   {
     id: 3,
     title: "VIVIENDA TRADICIONAL 3",
-    image: "/images/vivienda-tradicional-3.jpeg",
+    image: "/images/vivienda-tradicional-3.webp",
     offerPrice: "$15.980.000",
     bedrooms: "3 dormitorios",
     area: "52 m² más 18 m² de galería",
@@ -116,7 +116,7 @@ const tradicionales = [
     id: 4,
     title: "VIVIENDA TRADICIONAL 4",
     subtitle: "¡la más vendida!",
-    image: "/images/vivienda-tradicional-4.jpeg",
+    image: "/images/vivienda-tradicional-4.webp",
     offerPrice: "$18.190.000",
     bedrooms: "3 dormitorios",
     area: "70 m² más 25 m² de galería",
@@ -127,7 +127,7 @@ const tradicionales = [
   {
     id: 5,
     title: "VIVIENDA TRADICIONAL 5",
-    image: "/images/vivienda-tradicional-5.jpeg",
+    image: "/images/vivienda-tradicional-5.webp",
     offerPrice: "$22.550.000",
     bedrooms: "4 dormitorios",
     area: "84 m² más 35 m² de galería",
@@ -137,7 +137,7 @@ const tradicionales = [
   {
     id: 6,
     title: "VIVIENDA TRADICIONAL 6",
-    image: "/images/vivienda-tradicional-6.jpeg",
+    image: "/images/vivienda-tradicional-6.webp",
     offerPrice: "$22.650.000",
     bedrooms: "4 dormitorios",
     area: "105 m² cubiertos",
@@ -147,7 +147,7 @@ const tradicionales = [
     id: 7,
     title: "VIVIENDA TRADICIONAL 7",
     subtitle: "¡la más vendida!",
-    image: "/images/vivienda-tradicional-7.jpeg",
+    image: "/images/vivienda-tradicional-7.webp",
     offerPrice: "$15.250.000",
     bedrooms: "3 dormitorios",
     area: "57 m² más 11 m² de galería",
@@ -158,7 +158,7 @@ const tradicionales = [
     id: 8,
     title: "VIVIENDA TRADICIONAL 8",
     subtitle: "¡OFERTA ESPECIAL!",
-    image: "/images/vivienda-tradicional-8.jpg",
+    image: "/images/vivienda-tradicional-8.webp",
     offerPrice: "$18.280.000",
     bedrooms: "3 dormitorios",
     area: "59 m² más 19 m² de galería",
@@ -169,7 +169,7 @@ const tradicionales = [
     id: 9,
     title: "VIVIENDA TRADICIONAL 9",
     subtitle: "¡LA MAS ELEGIDA!",
-    image: "/images/vivienda-tradicional-9.jpg",
+    image: "/images/vivienda-tradicional-9.webp",
     offerPrice: "$18.180.000",
     bedrooms: "3 dormitorios",
     area: "72 m² más 20m² de galería",

@@ -117,7 +117,7 @@ const cabins = [
     id: 4,
     title: "CABAÑA 4",
     subtitle: "¡La más elegida! Ideal complejos turísticos",
-    image: "/images/cabania-4.jpeg",
+    image: "/images/cabania-4.webp",
     offerPrice: "$19.260.000",
     bedrooms: "3 dormitorios",
     area: "70 m² más 25 m² de galería",
