@@ -99,7 +99,7 @@ const specialOffers = [
     category: "Cabaña",
     title: "CABAÑA 1",
     subtitle: "¡LA MÁS ELEGIDA!",
-    image: "/images/caba-c3-b1a-1-tu-cassa-oferta.jpeg",
+    image: "/images/cabania-1.webp",
     offerPrice: "$14.800.000",
     originalPrice: "$15.800.000",
     savings: "$1.000.000",
