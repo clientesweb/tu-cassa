@@ -1,10 +1,8 @@
 import { AnnouncementBanner } from "@/components/announcement-banner"
 import { Header } from "@/components/header"
 import { HeroSlider } from "@/components/hero-slider"
-import { TrustSignals } from "@/components/trust-signals"
-import { UrgencyBanner } from "@/components/urgency-banner"
+import { PromotionalBanner } from "@/components/promotional-banner"
 import { MonthlyOffers } from "@/components/monthly-offers"
-import { ChristmasBanner } from "@/components/christmas-banner"
 import { Testimonials } from "@/components/testimonials"
 import { FAQSection } from "@/components/faq-section"
 import { CTAHero } from "@/components/cta-hero"
@@ -79,9 +77,7 @@ export default function HomePage() {
         <AnnouncementBanner />
         <Header />
         <HeroSlider />
-        <TrustSignals />
-        <ChristmasBanner />
-        <UrgencyBanner />
+        <PromotionalBanner />
         <MonthlyOffers />
         <NationalBanner />
         <Testimonials />

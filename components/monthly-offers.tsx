@@ -4,7 +4,6 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
-import { useState } from "react"
 
 const traditionallHouses = [
   {
@@ -109,9 +108,11 @@ const traditionallHouses = [
   },
 ]
 
-export function MonthlyOffers() {
-  const [viviendaType, setViviendaType] = useState<"minimalista" | "tradicional">("tradicional")
+const firstThreeHouses = traditionallHouses.slice(0, 3)
+const middleThreeHouses = traditionallHouses.slice(3, 6)
+const remainingHouses = traditionallHouses.slice(6)
 
+export function MonthlyOffers() {
   return (
     <section
       className="py-12 sm:py-16 lg:py-20 px-4 bg-gray-50 bg-cover bg-center bg-no-repeat"
@@ -132,9 +133,8 @@ export function MonthlyOffers() {
           </p>
         </div>
 
-        {/* Houses Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {traditionallHouses.map((house) => (
+          {firstThreeHouses.map((house) => (
             <Card key={house.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-white">
               {/* Image */}
               <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
@@ -200,36 +200,173 @@ export function MonthlyOffers() {
           ))}
         </div>
 
-        {/* Bottom CTA - Improved button with type selector */}
-        <div className="text-center mt-12 sm:mt-16 px-4">
-          <div className="max-w-2xl mx-auto flex flex-col gap-4">
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button
-                asChild
-                className="flex-1 bg-[#f75858] hover:bg-[#f75858]/90 text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 min-h-[48px]"
-              >
-                <Link href="/viviendas-tradicionales">
-                  <span>Viviendas Tradicionales</span>
-                </Link>
-              </Button>
-              <Button
-                asChild
-                className="flex-1 bg-[#f75858] hover:bg-[#f75858]/90 text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 min-h-[48px]"
-              >
-                <Link href="/viviendas-minimalistas">
-                  <span>Viviendas Minimalistas</span>
-                </Link>
-              </Button>
+        <div className="my-8 sm:my-12">
+          <Link
+            href="https://wa.me/5493425088000?text=Hola!%20Estoy%20interesado%20en%20la%20Vivienda%20Tradicional%203.%20Quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <div className="relative w-full bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <Image
+                src="/images/banner-cta-vivienda-tradicional-3.webp"
+                alt="Vivienda Tradicional 3 - Precio: $15.980.000 - ¡Contactar Ahora!"
+                width={1200}
+                height={400}
+                className="w-full h-auto object-contain"
+                priority
+              />
             </div>
-            <Button
-              asChild
-              className="w-full bg-[#f75858] hover:bg-[#f75858]/90 text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 min-h-[48px]"
-            >
-              <Link href="/viviendas-tradicionales">
-                <span>Explora todas nuestras viviendas disponibles</span>
-              </Link>
-            </Button>
-          </div>
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {middleThreeHouses.map((house) => (
+            <Card key={house.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-white">
+              {/* Image */}
+              <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
+                <Image
+                  src={house.image || "/placeholder.svg"}
+                  alt={house.title}
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
+                <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-[#f75858] text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium flex items-center gap-2">
+                  {house.isPopular && <span>⭐</span>}
+                  {house.type}
+                </div>
+              </div>
+
+              <CardContent className="p-4 sm:p-6">
+                {/* Title */}
+                <h3 className="text-lg sm:text-xl font-serif text-gray-900 mb-3 sm:mb-4">{house.title}</h3>
+
+                {/* Pricing */}
+                <div className="mb-3 sm:mb-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-2">
+                    <span className="text-xl sm:text-2xl font-bold text-[#f75858]">{house.offerPrice}</span>
+                    {house.originalPrice && (
+                      <span className="text-base sm:text-lg text-gray-500 line-through">{house.originalPrice}</span>
+                    )}
+                  </div>
+                  {house.originalPrice && (
+                    <div className="text-xs sm:text-sm text-green-600 font-medium">
+                      ¡Ahorrás $
+                      {(
+                        Number.parseInt(house.originalPrice.replace(/[$.,]/g, "")) -
+                        Number.parseInt(house.offerPrice.replace(/[$.,]/g, ""))
+                      ).toLocaleString()}
+                      !
+                    </div>
+                  )}
+                </div>
+
+                {/* Specifications */}
+                <div className="space-y-1 sm:space-y-2 mb-3 sm:mb-4">
+                  <div className="flex items-center text-gray-700 text-sm sm:text-base">
+                    <span className="font-medium text-[#f75858] mr-2">•</span>
+                    {house.bedrooms}
+                  </div>
+                  <div className="flex items-center text-gray-700 text-sm sm:text-base">
+                    <span className="font-medium text-[#f75858] mr-2">•</span>
+                    {house.area}
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed">{house.description}</p>
+
+                <Button
+                  asChild
+                  className="w-full bg-[#f75858] hover:bg-[#f75858]/90 text-white font-medium py-2 sm:py-3 text-sm sm:text-base"
+                >
+                  <Link href={`/viviendas-tradicionales/${house.id}`}>Ver Detalles</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="my-8 sm:my-12">
+          <Link href="https://wa.me/5493517623951" target="_blank" rel="noopener noreferrer" className="block">
+            <div className="relative w-full bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <Image
+                src="/images/banner-cta-caba-c3-b1a-4.webp"
+                alt="Cabaña 4 ¡La Más Elegida! - Ideal complejos turísticos - Precio: $19.260.000"
+                width={1200}
+                height={400}
+                className="w-full h-auto object-contain"
+                priority
+              />
+            </div>
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {remainingHouses.map((house) => (
+            <Card key={house.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-white">
+              {/* Image */}
+              <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
+                <Image
+                  src={house.image || "/placeholder.svg"}
+                  alt={house.title}
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-105"
+                />
+                <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-[#f75858] text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium flex items-center gap-2">
+                  {house.isPopular && <span>⭐</span>}
+                  {house.type}
+                </div>
+              </div>
+
+              <CardContent className="p-4 sm:p-6">
+                {/* Title */}
+                <h3 className="text-lg sm:text-xl font-serif text-gray-900 mb-3 sm:mb-4">{house.title}</h3>
+
+                {/* Pricing */}
+                <div className="mb-3 sm:mb-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-2">
+                    <span className="text-xl sm:text-2xl font-bold text-[#f75858]">{house.offerPrice}</span>
+                    {house.originalPrice && (
+                      <span className="text-base sm:text-lg text-gray-500 line-through">{house.originalPrice}</span>
+                    )}
+                  </div>
+                  {house.originalPrice && (
+                    <div className="text-xs sm:text-sm text-green-600 font-medium">
+                      ¡Ahorrás $
+                      {(
+                        Number.parseInt(house.originalPrice.replace(/[$.,]/g, "")) -
+                        Number.parseInt(house.offerPrice.replace(/[$.,]/g, ""))
+                      ).toLocaleString()}
+                      !
+                    </div>
+                  )}
+                </div>
+
+                {/* Specifications */}
+                <div className="space-y-1 sm:space-y-2 mb-3 sm:mb-4">
+                  <div className="flex items-center text-gray-700 text-sm sm:text-base">
+                    <span className="font-medium text-[#f75858] mr-2">•</span>
+                    {house.bedrooms}
+                  </div>
+                  <div className="flex items-center text-gray-700 text-sm sm:text-base">
+                    <span className="font-medium text-[#f75858] mr-2">•</span>
+                    {house.area}
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6 leading-relaxed">{house.description}</p>
+
+                <Button
+                  asChild
+                  className="w-full bg-[#f75858] hover:bg-[#f75858]/90 text-white font-medium py-2 sm:py-3 text-sm sm:text-base"
+                >
+                  <Link href={`/viviendas-tradicionales/${house.id}`}>Ver Detalles</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

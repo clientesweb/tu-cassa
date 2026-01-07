@@ -7,22 +7,22 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const slides = [
   {
-    image: "/images/banner-1-tu-cassa.jpeg",
-    title: "Precios inmejorables!",
-    subtitle: "Entrega al instante",
-    description: "Tu vivienda prefabricada con la mejor relación calidad-precio del mercado",
+    desktopImage: "/images/banner-principal.webp",
+    mobileImage: "/images/banner-mobile.webp",
+    title: "Viviendas Prefabricadas",
+    subtitle: "Calidad y confort para tu hogar",
   },
   {
-    image: "/images/banner-2-tu-cassa.jpeg",
-    title: "Elegí tu estilo",
-    subtitle: "Recibimos tu usado",
-    description: "Diseños tradicionales y minimalistas adaptados a tus necesidades",
+    desktopImage: "/images/banner-principal-2.webp",
+    mobileImage: "/images/banner-mobile-2.webp",
+    title: "Diseños Modernos",
+    subtitle: "Adaptados a tus necesidades",
   },
   {
-    image: "/images/banner-3-tu-cassa.jpeg",
-    title: "+17 años de trayectoria",
-    subtitle: "Nuestra Experiencia nos Avala",
-    description: "Más de una década construyendo hogares de calidad y confianza",
+    desktopImage: "/images/banner-principal-3.webp",
+    mobileImage: "/images/banner-mobile-3.webp",
+    title: "Construcción Rápida",
+    subtitle: "Entrega en 30 días",
   },
 ]
 
@@ -55,34 +55,25 @@ export function HeroSlider() {
           }`}
         >
           <Image
-            src={slide.image || "/placeholder.svg"}
-            alt={slide.title}
+            src={slide.desktopImage || "/placeholder.svg"}
+            alt="Vivienda prefabricada Tu Cassa"
             fill
-            className="object-cover"
+            className="object-cover hidden md:block"
             priority={index === 0}
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <Image
+            src={slide.mobileImage || "/placeholder.svg"}
+            alt="Vivienda prefabricada Tu Cassa"
+            fill
+            className="object-cover md:hidden"
+            priority={index === 0}
+          />
+          <div className="absolute inset-0 bg-black/30" />
 
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-white max-w-4xl px-4">
-              <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-balance">{slide.title}</h1>
-              <p className="text-xl md:text-2xl lg:text-3xl mb-6 text-balance">{slide.subtitle}</p>
-              <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-pretty">{slide.description}</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-[#f75858] hover:bg-[#f75858]/90 text-white" asChild>
-                  <a href="https://wa.me/5493517623951" target="_blank" rel="noopener noreferrer">
-                    Contactar
-                  </a>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="bg-white/10 border-white text-white hover:bg-[#f75858] hover:text-white hover:border-[#f75858]"
-                  asChild
-                >
-                  <a href="/ofertas">Ofertas</a>
-                </Button>
-              </div>
+            <div className="text-center text-white px-4">
+              <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">{slide.title}</h1>
+              <p className="text-xl md:text-2xl drop-shadow-md">{slide.subtitle}</p>
             </div>
           </div>
         </div>
@@ -92,7 +83,7 @@ export function HeroSlider() {
       <Button
         variant="ghost"
         size="icon"
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20"
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20 bg-black/20"
         onClick={prevSlide}
       >
         <ChevronLeft className="h-6 w-6" />
@@ -101,7 +92,7 @@ export function HeroSlider() {
       <Button
         variant="ghost"
         size="icon"
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20"
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20 bg-black/20"
         onClick={nextSlide}
       >
         <ChevronRight className="h-6 w-6" />

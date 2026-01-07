@@ -4,21 +4,23 @@ import { StructuredData } from "@/components/structured-data"
 import "./globals.css"
 
 const breeSerif = Bree_Serif({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   weight: ["400"],
   variable: "--font-bree-serif",
   display: "swap",
   preload: true,
   adjustFontFallback: true,
+  fallback: ["Georgia", "Times New Roman", "serif"],
 })
 
 const montserrat = Montserrat({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-montserrat",
   display: "swap",
   preload: true,
   adjustFontFallback: true,
+  fallback: ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
 })
 
 export const metadata = {
@@ -117,6 +119,21 @@ export default function RootLayout({
         <meta name="theme-color" content="#ef4444" />
         <meta name="msapplication-TileColor" content="#ef4444" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
+
+        <link
+          rel="preload"
+          href="https://fonts.gstatic.com/s/breeserif/v17/4UaHrEJCrhhnVA3DgluA96rp5w.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="https://fonts.gstatic.com/s/montserrat/v29/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
 
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
