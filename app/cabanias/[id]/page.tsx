@@ -12,7 +12,7 @@ const cabinsData = [
     title: "CABAÑA 1",
     subtitle: "¡La más elegida!",
     image: "/images/cabania-1.webp",
-    renderImage: "/images/cabania-3-render.jpg",
+    renderImage: "/images/cabania-1.webp",
     floorPlan: "/images/plano-cabania-1.jpg",
     offerPrice: "$14.800.000",
     originalPrice: "$15.800.000",
@@ -26,7 +26,7 @@ const cabinsData = [
   {
     id: 2,
     title: "CABAÑA 2",
-    image: "/images/cabania-2-tu-cassa.jpeg",
+    image: "/images/cabania-2.webp",
     renderImage: "/images/cabania-2.webp",
     floorPlan: "/images/plano-cabania-2.jpg",
     offerPrice: "$16.280.000",
@@ -38,7 +38,7 @@ const cabinsData = [
   {
     id: 3,
     title: "CABAÑA 3",
-    image: "/images/cabania-3-tu-cassa.jpeg",
+    image: "/images/cabania-3.webp",
     renderImage: "/images/cabania-3.webp",
     floorPlan: "/images/plano-cabania-3.jpg",
     offerPrice: "$17.250.000",
