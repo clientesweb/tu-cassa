@@ -135,7 +135,7 @@ export default function CabaniasPage() {
 
       {/* Hero Section */}
       <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
-        <Image src="/images/cabania-4-tu-cassa.jpeg" alt="Cabañas Tu Cassa" fill className="object-cover" priority />
+        <Image src="/images/cabania-4.webp" alt="Cabañas Tu Cassa" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white max-w-4xl px-4">
