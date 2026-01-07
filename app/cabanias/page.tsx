@@ -83,7 +83,7 @@ const cabins = [
     id: 1,
     title: "CABAÑA 1",
     subtitle: "¡La más elegida!",
-    image: "/images/caba-c3-b1a-1-tu-cassa-oferta.jpeg",
+    image: "/images/cabania-1.webp",
     offerPrice: "$14.800.000",
     originalPrice: "$15.800.000",
     savings: "$1.000.000",
@@ -96,7 +96,7 @@ const cabins = [
   {
     id: 2,
     title: "CABAÑA 2",
-    image: "/images/cabania-2-tu-cassa.jpeg",
+    image: "/images/cabania-2.webp",
     offerPrice: "$16.280.000",
     bedrooms: "2 dormitorios",
     area: "42 m² más 15 m² de galería",
@@ -106,7 +106,7 @@ const cabins = [
   {
     id: 3,
     title: "CABAÑA 3",
-    image: "/images/cabania-3-tu-cassa.jpeg",
+    image: "/images/cabania-3.webp",
     offerPrice: "$17.250.000",
     bedrooms: "3 dormitorios",
     area: "52 m² más 18 m² de galería",
