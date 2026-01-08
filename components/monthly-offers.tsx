@@ -282,7 +282,7 @@ export function MonthlyOffers() {
         </div>
 
         <div className="my-8 sm:my-12">
-          <Link href="https://wa.me/5493517623951" target="_blank" rel="noopener noreferrer" className="block">
+          <Link href="https://tucassa.com.ar/cabanias/4" target="_blank" rel="noopener noreferrer" className="block">
             <div className="relative w-full bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <Image
                 src="/images/banner-cta-caba-c3-b1a-4.webp"
