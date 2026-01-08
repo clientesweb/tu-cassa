@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 
-const announcements = ["VIVIENDA MINIMALISTA 1 ¡La más vendida!"]
+const announcements = ["EMPEZA EL 2026 CON TU CASSA PROPIA"]
 
 export function AnnouncementBanner() {
   const [currentIndex, setCurrentIndex] = useState(0)
