@@ -115,7 +115,7 @@ const specialOffers = [
     category: "Vivienda Minimalista",
     title: "VIVIENDA MINIMALISTA 1",
     subtitle: "¡LA MÁS VENDIDA!",
-    image: "/images/vivienda-minimalista-1.jpg",
+    image: "/images/vivienda-minimalista-1.webp",
     offerPrice: "$17.280.000",
     originalPrice: "$18.280.000",
     savings: "$1.000.000",
