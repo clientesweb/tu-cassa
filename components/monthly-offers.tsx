@@ -196,7 +196,7 @@ export function MonthlyOffers() {
 
         <div className="my-8 sm:my-12">
           <Link
-            href="https://wa.me/5493425088000?text=Hola!%20Estoy%20interesado%20en%20la%20Vivienda%20Tradicional%203.%20Quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n."
+            href="https://wa.me/5493517623951?text=Hola!%20Estoy%20interesado%20en%20la%20Vivienda%20Tradicional%203.%20Quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n."
             target="_blank"
             rel="noopener noreferrer"
             className="block"
